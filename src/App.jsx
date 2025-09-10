@@ -10,7 +10,7 @@ const LulavChart = () => {
 
   return (
     <div className="container">
-      <h1>🌿 Kavannot for Shaking the Lulav - Na'anuim 🌿</h1>
+      <h1>🌿 Kavanos for Shaking the Lulav - Na'anuim 🌿</h1>
 
       <div className="mystical-note">
         <div className="note-title">
@@ -50,15 +50,6 @@ const LulavChart = () => {
       </div>
 
       <div className="mystical-note">
-        <div className="note-title">Essential Concept:</div>
-        The final ה (Hey) of Hashem's name יהוה remains stationary during all
-        shakings, representing Malchut (Kingship) which receives from all
-        directions. We permute only the first three letters (יהו) in 6 different
-        combinations for each direction, totaling 18 letters and 18 shakings -
-        corresponding to the word חי (Life).
-      </div>
-
-      <div className="mystical-note">
         <div className="note-title">
           The Four Species as a Living Divine Name:
         </div>
@@ -71,16 +62,37 @@ const LulavChart = () => {
         channels the <strong>ו'</strong> - the connecting line between upper and
         lower; and <strong>אתרוג</strong> (etrog) receives as the final{" "}
         <strong>ה'</strong> - malchut that integrates all divine emanations.
-        This isn't merely symbolic - by uniting these four species, you
-        transform your hands into a <strong>מרכבה</strong> (divine chariot) for
-        the complete divine name. Each species contributes its unique spiritual
-        fragrance: the הדסים with their abundant leaves represent divine
-        abundance, the ערבות without scent teach divine humility, the לולב with
-        taste but no scent shows divine sustenance, and the אתרוג with both
-        taste and fragrance embodies the complete tzaddik who possesses both
-        Torah knowledge and good deeds. Together, they proclaim{" "}
-        <strong>אין עוד מלבדו</strong> - that Hashem alone is the true existence
-        behind all appearances.
+      </div>
+
+      <div className="mystical-note">
+        <div className="note-title">Heart and Channel:</div>
+        Imagine the <strong>אתרוג</strong> as your heart and the{" "}
+        <strong>לולב</strong> as a channel for drawing down <strong>דעת</strong>{" "}
+        (Divine wisdom) and <strong>חסד</strong> (loving-kindness) from above.
+        Each wave draws <strong>חסד</strong> from the transcendent level of{" "}
+        <strong>דעת</strong> into your heart, which then flows to the
+        corresponding limb. This creates a circulation system where divine
+        consciousness flows from the highest source through your heart to
+        illuminate each aspect of your being.
+      </div>
+
+      <div className="mystical-note">
+        <div className="note-title">
+          The Mathematics of Complete Encirclement:
+        </div>
+        When we add the gematria values of all six <strong>milui</strong>{" "}
+        (divine name spellings) used during the lulav shakings, we reach a
+        profound total:{" "}
+        <span className="gematria">
+          עב (72) + סג (63) + מה (45) + עב (72) + סג (63) + מה (45) = 360
+        </span>
+        . This equals the degrees in a complete circle, revealing that through
+        the six directional movements, we create a perfect sphere of divine
+        protection around ourselves. Just as{" "}
+        <span className="gematria">360</span> represents geometric completeness,
+        our waving establishes <strong>שלימות</strong> (wholeness) - we are
+        completely surrounded by divine consciousness flowing from all
+        directions.
       </div>
 
       <table className="chart">
@@ -100,7 +112,6 @@ const LulavChart = () => {
             <th>
               Milui
               <br />
-              (Spelling)
             </th>
             <th>
               Going Out (Holacha)
@@ -126,7 +137,7 @@ const LulavChart = () => {
               <br />
               (Kindness)
             </td>
-            <td className="hebrew">יהו</td>
+            <td className="hebrew">י-ה-ו</td>
             <td className="milui">
               עב (72)
               <br />
@@ -159,7 +170,7 @@ const LulavChart = () => {
               <br />
               (Strength)
             </td>
-            <td className="hebrew">הוי</td>
+            <td className="hebrew">ה-ו-י</td>
             <td className="milui">
               סג (63)
               <br />
@@ -191,7 +202,7 @@ const LulavChart = () => {
               <br />
               (Harmony)
             </td>
-            <td className="hebrew">ויה</td>
+            <td className="hebrew">ו-י-ה</td>
             <td className="milui">
               מה (45)
               <br />
@@ -219,7 +230,7 @@ const LulavChart = () => {
               <br />
               (Victory)
             </td>
-            <td className="hebrew">יוה</td>
+            <td className="hebrew">י-ו-ה</td>
             <td className="milui">
               עב (72)
               <br />
@@ -248,7 +259,7 @@ const LulavChart = () => {
               <br />
               (Gratitude)
             </td>
-            <td className="hebrew">הוי</td>
+            <td className="hebrew">ה-ו-י</td>
             <td className="milui">
               סג (63)
               <br />
@@ -281,7 +292,7 @@ const LulavChart = () => {
               <br />
               (Foundation)
             </td>
-            <td className="hebrew">והי</td>
+            <td className="hebrew">ו-ה-י</td>
             <td className="milui">
               מה (45)
               <br />
@@ -314,6 +325,15 @@ const LulavChart = () => {
         (represented by the final ה) remains spiritually "in place" regardless
         of which divine emanation they receive. This is the deeper meaning of
         dwelling in the sukkah during the festival.
+      </div>
+
+      <div className="mystical-note">
+        <div className="note-title">Essential Concept:</div>
+        The final ה (Hey) of Hashem's name יהוה remains stationary during all
+        shakings, representing Malchut (Kingship) which receives from all
+        directions. We permute only the first three letters (יהו) in 6 different
+        combinations for each direction, totaling 18 letters and 18 shakings -
+        corresponding to the word חי (Life).
       </div>
 
       <div className="mystical-note">
