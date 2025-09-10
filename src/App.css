@@ -58,11 +58,16 @@ h1 {
   background-color: #fff8dc;
 }
 .milui {
-  font-size: 12px;
+  font-size: 19px;
   color: #666;
   font-style: italic;
   text-align: center;
   background-color: #f9f9f9;
+  width: 90px;
+}
+.miluishem {
+  font-weight: bold;
+  font-size: 18px;
 }
 .meditation {
   font-size: 12px;

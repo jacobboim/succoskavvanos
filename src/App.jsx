@@ -65,279 +65,6 @@ const LulavChart = () => {
       </div>
 
       <div className="mystical-note">
-        <div className="note-title">Heart and Channel:</div>
-        Imagine the <strong>אתרוג</strong> as your heart and the{" "}
-        <strong>לולב</strong> as a channel for drawing down <strong>דעת</strong>{" "}
-        (Divine wisdom) and <strong>חסד</strong> (loving-kindness) from above.
-        Each wave draws <strong>חסד</strong> from the transcendent level of{" "}
-        <strong>דעת</strong> into your heart, which then flows to the
-        corresponding limb. This creates a circulation system where divine
-        consciousness flows from the highest source through your heart to
-        illuminate each aspect of your being.
-      </div>
-
-      <div className="mystical-note">
-        <div className="note-title">
-          The Mathematics of Complete Encirclement:
-        </div>
-        When we add the gematria values of all six <strong>milui</strong>{" "}
-        (divine name spellings) used during the lulav shakings, we reach a
-        profound total:{" "}
-        <span className="gematria">
-          עב (72) + סג (63) + מה (45) + עב (72) + סג (63) + מה (45) = 360
-        </span>
-        . This equals the degrees in a complete circle, revealing that through
-        the six directional movements, we create a perfect sphere of divine
-        protection around ourselves. Just as{" "}
-        <span className="gematria">360</span> represents geometric completeness,
-        our waving establishes <strong>שלימות</strong> (wholeness) - we are
-        completely surrounded by divine consciousness flowing from all
-        directions.
-      </div>
-      <div className="table-container">
-        <table className="chart">
-          <thead>
-            <tr>
-              <th>Direction</th>
-              <th>
-                Sefirah
-                <br />
-                (Middah)
-              </th>
-              <th>
-                Divine Name
-                <br />
-                Permutation
-              </th>
-              <th>
-                Milui
-                <br />
-              </th>
-              <th>
-                Going Out (Holacha)
-                <br />
-                Mystical Elevation
-              </th>
-              <th>
-                Coming In (Havoa)
-                <br />
-                Drawing Down Light
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="direction">
-                Right
-                <br />
-                (South)
-              </td>
-              <td className="sefirah">
-                Chesed
-                <br />
-                (Kindness)
-              </td>
-              <td className="hebrew">י-ה-ו</td>
-              <td className="milui">
-                עב (72)
-                <br />
-              </td>
-              <td className="meditation going-out">
-                Raise Chesed to its root in Da'at. Elevate personal love toward
-                Hashem above worldly desires. Focus on divine kindness flowing
-                from the right side - the side of giving and expansion. <br />
-                <br />
-                <em>Mystical aspect:</em> Connect to the primordial light of
-                creation, drawing from the infinite compassion of Ein Sof.
-              </td>
-              <td className="meditation coming-in">
-                Bring this light into Malchut, inspiring love and devotion. Pray
-                for mercy, forgiveness, and abundance of kindness from Above.{" "}
-                <br />
-                <br />
-                <em>Effect:</em> Hearts opened to receive divine love and to
-                give it to others.
-              </td>
-            </tr>
-            <tr>
-              <td className="direction">
-                Left
-                <br />
-                (North)
-              </td>
-              <td className="sefirah">
-                Gevurah
-                <br />
-                (Strength)
-              </td>
-              <td className="hebrew">ה-ו-י</td>
-              <td className="milui">
-                סג (63)
-                <br />
-              </td>
-              <td className="meditation going-out">
-                Raise Gevurah to its root in Da'at. Elevate fear of Hashem above
-                fear of people or the physical world. Focus on divine strength
-                and boundaries - the ability to say 'no' to evil. <br />
-                <br />
-                <em>Mystical aspect:</em> Channel the contracting force that
-                creates vessels for divine light.
-              </td>
-              <td className="meditation coming-in">
-                Bring light into Malchut, instilling proper fear of Heaven.
-                Empower the soul to resist the yetzer hara and avoid sin. <br />
-                <br />
-                <em>Effect:</em> Inner strength to overcome spiritual challenges
-                and maintain boundaries.
-              </td>
-            </tr>
-            <tr>
-              <td className="direction">
-                Forward
-                <br />
-                (East)
-              </td>
-              <td className="sefirah">
-                Tiferet
-                <br />
-                (Harmony)
-              </td>
-              <td className="hebrew">ו-י-ה</td>
-              <td className="milui">
-                מה (45)
-                <br />
-              </td>
-              <td className="meditation going-out">
-                Raise Tiferet to its root in Da'at. Align with the beauty of
-                Torah and mitzvot rather than seeking worldly approval. Focus on
-                harmony between Chesed and Gevurah. <br />
-                <br />
-                <em>Mystical aspect:</em> The human realm (מה - "what?") seeking
-                to understand divine beauty.
-              </td>
-              <td className="meditation coming-in">
-                Bring light into Malchut, beautifying service to Hashem. Pray
-                for spiritual renewal to shine on all Israel. <br />
-                <br />
-                <em>Effect:</em> Balance and harmony in spiritual practice and
-                daily life.
-              </td>
-            </tr>
-            <tr>
-              <td className="direction">Up</td>
-              <td className="sefirah">
-                Netzach
-                <br />
-                (Victory)
-              </td>
-              <td className="hebrew">י-ו-ה</td>
-              <td className="milui">
-                עב (72)
-                <br />
-              </td>
-              <td className="meditation going-out">
-                Raise Netzach to its root in Da'at. Focus on overcoming the
-                yetzer hara and achieving victory in spiritual matters. Channel
-                energy toward eternal goals. <br />
-                <br />
-                <em>Mystical aspect:</em> Victory corresponds to the right
-                column's extension upward.
-              </td>
-              <td className="meditation coming-in">
-                Bring light into Malchut, instilling perseverance and triumph
-                over challenges. Pray for success in both spiritual and material
-                endeavors. <br />
-                <br />
-                <em>Effect:</em> Persistent spiritual strength and divine
-                assistance in challenges.
-              </td>
-            </tr>
-            <tr>
-              <td className="direction">Down</td>
-              <td className="sefirah">
-                Hod
-                <br />
-                (Gratitude)
-              </td>
-              <td className="hebrew">ה-ו-י</td>
-              <td className="milui">
-                סג (63)
-                <br />
-              </td>
-              <td className="meditation going-out">
-                Raise Hod to its root in Da'at. Cultivate gratitude to Hashem
-                for His kindness, recognizing His gifts in every moment. Submit
-                to divine will. <br />
-                <br />
-                <em>Mystical aspect:</em> Acknowledge divine sovereignty and our
-                dependence on His grace.
-              </td>
-              <td className="meditation coming-in">
-                Bring light into Malchut, filling the heart with true gratitude
-                and submission. Pray to always recognize Hashem's continuous
-                kindness. <br />
-                <br />
-                <em>Effect:</em> Heart filled with appreciation and humble
-                recognition of divine gifts.
-              </td>
-            </tr>
-            <tr>
-              <td className="direction">
-                Back
-                <br />
-                (West)
-              </td>
-              <td className="sefirah">
-                Yesod
-                <br />
-                (Foundation)
-              </td>
-              <td className="hebrew">ו-ה-י</td>
-              <td className="milui">
-                מה (45)
-                <br />
-              </td>
-              <td className="meditation going-in">
-                Raise Yesod to its root in Da'at. Form holy connections with
-                righteous individuals. Dedicate oneself fully to Hashem's
-                service with purity of intent. <br />
-                <br />
-                <em>Mystical aspect:</em> The channel through which all upper
-                lights flow to Malchut.
-              </td>
-              <td className="meditation coming-in">
-                Bring light into Malchut, solidifying connection to Hashem and
-                spiritual purity. Pray for all Jewish souls in exile to return.{" "}
-                <br />
-                <br />
-                <em>Effect:</em> Strong foundation for spiritual growth and
-                connection to the community of Israel.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div className="mystical-note">
-        <div className="note-title">The Sukkah Connection:</div>
-        Just as the Clouds of Glory traveled from place to place yet were
-        considered "in their place" because they followed divine will ("על פי ה'
-        יחנו ועל פי ה' יסעו"), so too one who accepts the yoke of Heaven
-        (represented by the final ה) remains spiritually "in place" regardless
-        of which divine emanation they receive. This is the deeper meaning of
-        dwelling in the sukkah during the festival.
-      </div>
-
-      <div className="mystical-note">
-        <div className="note-title">Essential Concept:</div>
-        The final ה (Hey) of Hashem's name יהוה remains stationary during all
-        shakings, representing Malchut (Kingship) which receives from all
-        directions. We permute only the first three letters (יהו) in 6 different
-        combinations for each direction, totaling 18 letters and 18 shakings -
-        corresponding to the word חי (Life).
-      </div>
-
-      <div className="mystical-note">
         <div className="note-title">Daily Sefirot Focus - Select Your Day:</div>
         <select
           className="day-selector"
@@ -669,6 +396,286 @@ const LulavChart = () => {
           your preferences
         </div>
       )}
+
+      <div className="table-container">
+        <table className="chart">
+          <thead>
+            <tr>
+              <th>Direction</th>
+              <th>
+                Sefirah
+                <br />
+                (Middah)
+              </th>
+              <th>
+                Divine Name
+                <br />
+                Permutation
+              </th>
+              <th>
+                Milui
+                <br />
+              </th>
+              <th>
+                Going Out (Holacha)
+                <br />
+                Mystical Elevation
+              </th>
+              <th>
+                Coming In (Havoa)
+                <br />
+                Drawing Down Light
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="direction">
+                Right
+                <br />
+                (South/דרום)
+              </td>
+              <td className="sefirah">
+                Chesed
+                <br />
+                (Kindness)
+              </td>
+              <td className="hebrew">י-ה-ו</td>
+              <td className="milui">
+                עב (72)
+                <br />
+                <span className="miluishem">יוד הי ויו הי</span>
+              </td>
+              <td className="meditation going-out">
+                Raise Chesed to its root in Da'at. Elevate personal love toward
+                Hashem above worldly desires. Focus on divine kindness flowing
+                from the right side - the side of giving and expansion. <br />
+                <br />
+                <em>Mystical aspect:</em> Connect to the primordial light of
+                creation, drawing from the infinite compassion of Ein Sof.
+              </td>
+              <td className="meditation coming-in">
+                Bring this light into Malchut, inspiring love and devotion. Pray
+                for mercy, forgiveness, and abundance of kindness from Above.{" "}
+                <br />
+                <br />
+                <em>Effect:</em> Hearts opened to receive divine love and to
+                give it to others.
+              </td>
+            </tr>
+            <tr>
+              <td className="direction">
+                Left
+                <br />
+                (North/צפון)
+              </td>
+              <td className="sefirah">
+                Gevurah
+                <br />
+                (Strength)
+              </td>
+              <td className="hebrew">ה-ו-י</td>
+              <td className="milui">
+                סג (63)
+                <br />
+                <span className="miluishem">יוד הי ואו הי</span>
+              </td>
+              <td className="meditation going-out">
+                Raise Gevurah to its root in Da'at. Elevate fear of Hashem above
+                fear of people or the physical world. Focus on divine strength
+                and boundaries - the ability to say 'no' to evil. <br />
+                <br />
+                <em>Mystical aspect:</em> Channel the contracting force that
+                creates vessels for divine light.
+              </td>
+              <td className="meditation coming-in">
+                Bring light into Malchut, instilling proper fear of Heaven.
+                Empower the soul to resist the yetzer hara and avoid sin. <br />
+                <br />
+                <em>Effect:</em> Inner strength to overcome spiritual challenges
+                and maintain boundaries.
+              </td>
+            </tr>
+            <tr>
+              <td className="direction">
+                Forward
+                <br />
+                (East/מזרח)
+              </td>
+              <td className="sefirah">
+                Tiferet
+                <br />
+                (Harmony)
+              </td>
+              <td className="hebrew">ו-י-ה</td>
+              <td className="milui">
+                מה (45)
+                <br />
+                <span className="miluishem">יוד הא ואו הא</span>
+              </td>
+              <td className="meditation going-out">
+                Raise Tiferet to its root in Da'at. Align with the beauty of
+                Torah and mitzvot rather than seeking worldly approval. Focus on
+                harmony between Chesed and Gevurah. <br />
+                <br />
+                <em>Mystical aspect:</em> The human realm (מה - "what?") seeking
+                to understand divine beauty.
+              </td>
+              <td className="meditation coming-in">
+                Bring light into Malchut, beautifying service to Hashem. Pray
+                for spiritual renewal to shine on all Israel. <br />
+                <br />
+                <em>Effect:</em> Balance and harmony in spiritual practice and
+                daily life.
+              </td>
+            </tr>
+            <tr>
+              <td className="direction">Up (מעלה)</td>
+              <td className="sefirah">
+                Netzach
+                <br />
+                (Victory)
+              </td>
+              <td className="hebrew">י-ו-ה</td>
+              <td className="milui">
+                עב (72)
+                <br />
+                <span className="miluishem">יוד הי ויו הי</span>
+              </td>
+              <td className="meditation going-out">
+                Raise Netzach to its root in Da'at. Focus on overcoming the
+                yetzer hara and achieving victory in spiritual matters. Channel
+                energy toward eternal goals. <br />
+                <br />
+                <em>Mystical aspect:</em> Victory corresponds to the right
+                column's extension upward.
+              </td>
+              <td className="meditation coming-in">
+                Bring light into Malchut, instilling perseverance and triumph
+                over challenges. Pray for success in both spiritual and material
+                endeavors. <br />
+                <br />
+                <em>Effect:</em> Persistent spiritual strength and divine
+                assistance in challenges.
+              </td>
+            </tr>
+            <tr>
+              <td className="direction">Down (מטה)</td>
+              <td className="sefirah">
+                Hod
+                <br />
+                (Gratitude)
+              </td>
+              <td className="hebrew">ה-ו-י</td>
+              <td className="milui">
+                סג (63)
+                <br />
+                <span className="miluishem">יוד הי ואו הי</span>
+              </td>
+              <td className="meditation going-out">
+                Raise Hod to its root in Da'at. Cultivate gratitude to Hashem
+                for His kindness, recognizing His gifts in every moment. Submit
+                to divine will. <br />
+                <br />
+                <em>Mystical aspect:</em> Acknowledge divine sovereignty and our
+                dependence on His grace.
+              </td>
+              <td className="meditation coming-in">
+                Bring light into Malchut, filling the heart with true gratitude
+                and submission. Pray to always recognize Hashem's continuous
+                kindness. <br />
+                <br />
+                <em>Effect:</em> Heart filled with appreciation and humble
+                recognition of divine gifts.
+              </td>
+            </tr>
+            <tr>
+              <td className="direction">
+                Back
+                <br />
+                (West/מערב)
+              </td>
+              <td className="sefirah">
+                Yesod
+                <br />
+                (Foundation)
+              </td>
+              <td className="hebrew">ו-ה-י</td>
+              <td className="milui">
+                מה (45)
+                <br />
+                <span className="miluishem">יוד הא ואו הא</span>
+              </td>
+              <td className="meditation going-in">
+                Raise Yesod to its root in Da'at. Form holy connections with
+                righteous individuals. Dedicate oneself fully to Hashem's
+                service with purity of intent. <br />
+                <br />
+                <em>Mystical aspect:</em> The channel through which all upper
+                lights flow to Malchut.
+              </td>
+              <td className="meditation coming-in">
+                Bring light into Malchut, solidifying connection to Hashem and
+                spiritual purity. Pray for all Jewish souls in exile to return.{" "}
+                <br />
+                <br />
+                <em>Effect:</em> Strong foundation for spiritual growth and
+                connection to the community of Israel.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div className="mystical-note">
+        <div className="note-title">Heart and Channel:</div>
+        Imagine the <strong>אתרוג</strong> as your heart and the{" "}
+        <strong>לולב</strong> as a channel for drawing down <strong>דעת</strong>{" "}
+        (Divine wisdom) and <strong>חסד</strong> (loving-kindness) from above.
+        Each wave draws <strong>חסד</strong> from the transcendent level of{" "}
+        <strong>דעת</strong> into your heart, which then flows to the
+        corresponding limb. This creates a circulation system where divine
+        consciousness flows from the highest source through your heart to
+        illuminate each aspect of your being.
+      </div>
+
+      <div className="mystical-note">
+        <div className="note-title">
+          The Mathematics of Complete Encirclement:
+        </div>
+        When we add the gematria values of all six <strong>milui</strong>{" "}
+        (divine name spellings) used during the lulav shakings, we reach a
+        profound total:{" "}
+        <span className="gematria">
+          עב (72) + סג (63) + מה (45) + עב (72) + סג (63) + מה (45) = 360
+        </span>
+        . This equals the degrees in a complete circle, revealing that through
+        the six directional movements, we create a perfect sphere of divine
+        protection around ourselves. Just as{" "}
+        <span className="gematria">360</span> represents geometric completeness,
+        our waving establishes <strong>שלימות</strong> (wholeness) - we are
+        completely surrounded by divine consciousness flowing from all
+        directions.
+      </div>
+
+      <div className="mystical-note">
+        <div className="note-title">The Sukkah Connection:</div>
+        Just as the Clouds of Glory traveled from place to place yet were
+        considered "in their place" because they followed divine will ("על פי ה'
+        יחנו ועל פי ה' יסעו"), so too one who accepts the yoke of Heaven
+        (represented by the final ה) remains spiritually "in place" regardless
+        of which divine emanation they receive. This is the deeper meaning of
+        dwelling in the sukkah during the festival.
+      </div>
+
+      <div className="mystical-note">
+        <div className="note-title">Essential Concept:</div>
+        The final ה (Hey) of Hashem's name יהוה remains stationary during all
+        shakings, representing Malchut (Kingship) which receives from all
+        directions. We permute only the first three letters (יהו) in 6 different
+        combinations for each direction, totaling 18 letters and 18 shakings -
+        corresponding to the word חי (Life).
+      </div>
     </div>
   );
 };
