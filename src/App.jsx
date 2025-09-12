@@ -566,7 +566,7 @@ const LulavChart = () => {
                 <br />
                 (Gratitude)
               </td>
-              <td className="hebrew">ה-ו-י</td>
+              <td className="hebrew">ה-י-ו</td>
               <td className="milui">
                 סג (63)
                 <br />
@@ -638,43 +638,491 @@ const LulavChart = () => {
         consciousness flows from the highest source through your heart to
         illuminate each aspect of your being.
       </div>
+      <div className="mystical-note">
+        <div className="note-title">
+          The Mathematics of Divine Completion - Shema and Baruch Shem:
+        </div>
+        The gematria here reveals a profound spiritual transformation taking
+        place through your Four Species practice. When you spell out{" "}
+        <strong>לולב אתרוג הדס ערבה</strong> in their full letter names
+        (למד־וו־למד־בית, אלף־תו־ריש־וו־גימל, הי־דלת־סמך, עין־ריש־בית־הי) and add
+        4 (representing the four words), the total equals exactly three times
+        the complete <strong>שמע ישראל ה׳ אלקינו ה׳ אחד</strong> - corresponding
+        to your three daily recitations of Shema (morning, evening, and
+        bedtime).
+        <br />
+        <br />
+        But here's where this becomes extraordinary: The word{" "}
+        <strong>סוכה</strong> spelled in full letters (סמך־וו־כף־הי) equals
+        exactly 240. This is precisely the numerical difference between{" "}
+        <strong>שמע ישראל ה׳ אלקינו ה׳ אחד</strong> (1,118) and{" "}
+        <strong>ברוך שם כבוד מלכותו לעולם ועד</strong> (1,358). The difference
+        is exactly 240.
+        <br />
+        <br />
+        Since the Torah mentions "sukkah" three times in the verses about
+        dwelling in sukkot, we have 3 × 240 = 720. This means that through the
+        three-fold power of the sukkah, your three daily recitations of{" "}
+        <strong>שמע ישראל</strong> (represented by the Four Species) are
+        transformed into three recitations of{" "}
+        <strong>ברוך שם כבוד מלכותו לעולם ועד</strong>.
+        <br />
+        <br />
+        <strong>The Spiritual Transformation:</strong>{" "}
+        <strong>שמע ישראל</strong> represents <strong>יחודא עילאה</strong>{" "}
+        (higher unification) - contemplating God as He exists in His infinite
+        essence, beyond all worlds. This corresponds to the Four Species, about
+        which the Midrash states: "Etrog - this is God, Lulav - this is God,
+        Hadas - this is God, Aravah - this is God" - they represent direct
+        connection to the Divine essence.
+        <br />
+        <br />
+        <strong>ברוך שם כבוד מלכותו לעולם ועד</strong> represents{" "}
+        <strong>יחודא תתאה</strong> (lower unification) - recognizing God's Name
+        as it descends and rules within all worlds, revealed through His
+        attribute of <strong>מלכות</strong> (Kingship). This corresponds to the
+        sukkah, which represents <strong>מלכות</strong> and recalls the{" "}
+        <strong>ענני הכבוד</strong> (Clouds of Glory) - divine lights that
+        surround all Israel in connection with <strong>כנסת ישראל</strong> (the
+        divine feminine), which is <strong>מלכות</strong>.
+        <br />
+        <br />
+        <strong>The Physical Structure as Spiritual Symbol:</strong> Even the
+        sukkah's required structure - two complete walls and a third wall of
+        even one handbreadth - forms the shape of the letter <strong>ה</strong>{" "}
+        (Hey), representing the final <strong>ה</strong> of God's name{" "}
+        <strong>יהוה</strong>, which is <strong>מלכות</strong>.
+        <br />
+        <br />
+        <strong>Your Practice:</strong> When you shake the Four Species inside
+        the sukkah, you're literally uniting <strong>יחודא עילאה</strong> with{" "}
+        <strong>יחודא תתאה</strong> - drawing the infinite divine essence down
+        through the Name <strong>יהוה</strong> to illuminate the souls of
+        Israel.
+      </div>
 
       <div className="mystical-note">
         <div className="note-title">
-          The Mathematics of Complete Encirclement:
+          The Lulav as Your Spinal Column of Divine Connection:
         </div>
-        When we add the gematria values of all six <strong>milui</strong>{" "}
-        (divine name spellings) used during the lulav shakings, we reach a
-        profound total:{" "}
-        <span className="gematria">
-          עב (72) + סג (63) + מה (45) + עב (72) + סג (63) + מה (45) = 360
-        </span>
-        . This equals the degrees in a complete circle, revealing that through
-        the six directional movements, we create a perfect sphere of divine
-        protection around ourselves. Just as{" "}
-        <span className="gematria">360</span> represents geometric completeness,
-        our waving establishes <strong>שלימות</strong> (wholeness) - we are
-        completely surrounded by divine consciousness flowing from all
-        directions.
+        The <strong>לולב</strong> represents your spinal column - the channel
+        connecting mind and heart, brain and body. When you raise and lower it,
+        you're creating a flow of divine consciousness from your intellect down
+        through your spine into your heart, then spreading to all your limbs.
+        The lulav binds with <strong>הדסים וערבות</strong> below while extending
+        above them, showing how you connect supernal wisdom to lower levels
+        through your central channel. Each movement draws{" "}
+        <strong>דעת עליון</strong> (supernal knowledge) through your spiritual
+        spine into every aspect of your being.
       </div>
 
       <div className="mystical-note">
-        <div className="note-title">The Sukkah Connection:</div>
-        Just as the Clouds of Glory traveled from place to place yet were
-        considered "in their place" because they followed divine will ("על פי ה'
-        יחנו ועל פי ה' יסעו"), so too one who accepts the yoke of Heaven
-        (represented by the final ה) remains spiritually "in place" regardless
-        of which divine emanation they receive. This is the deeper meaning of
-        dwelling in the sukkah during the festival.
+        <div className="note-title">
+          The Lulav's Constant הולכה והבאה - Subjugating the Heart:
+        </div>
+        The <strong>לולב</strong> requires constant <strong>הולכה והבאה</strong>{" "}
+        (going out and bringing in) because <strong>לולב</strong> contains the
+        mystical letters <strong>ל"ו ל"ב</strong> (36 and 32) that subjugate the
+        heart and all vitality to the Creator. This mirrors the spiritual return
+        that happens on Rosh Hashanah and Yom Kippur, when out of fear of divine
+        judgment, everyone returns to Hashem.
+        <br />
+        <br />
+        <strong>The Two-Phase Flow:</strong> When you connect yourself above
+        through <strong>הולכה</strong> (extending outward),{" "}
+        <strong>שפע הדעת וחסדיו</strong> (the flow of divine knowledge and
+        kindnesses) pour down upon you from above. Then through{" "}
+        <strong>הבאה</strong> (bringing inward), you draw this flow of divine
+        vitality into yourself, subjugating all spirits and forces to Hashem -
+        declaring that everything comes from Him and He alone gives life to all.
+        <br />
+        <br />
+        <strong>Stopping Evil Winds and Dews:</strong> This movement pattern
+        accomplishes what the Sages described:{" "}
+        <strong>מוליך ומביא מעלה ומוריד לעצור רוחות וטללים רעים</strong> ("He
+        brings forth and brings back, raises up and brings down, to stop evil
+        winds and evil dews"). When the great <strong>חסד</strong> (kindness)
+        arrives through your movements, all <strong>דינים</strong> (harsh
+        judgments) are erased.
       </div>
 
-      <div className="mystical-note">
-        <div className="note-title">Essential Concept:</div>
-        The final ה (Hey) of Hashem's name יהוה remains stationary during all
-        shakings, representing Malchut (Kingship) which receives from all
-        directions. We permute only the first three letters (יהו) in 6 different
-        combinations for each direction, totaling 18 letters and 18 shakings -
-        corresponding to the word חי (Life).
+      <div className="mystical-note-container">
+        <div className="mystical-note">
+          <div className="note-title">
+            The Mathematics of Complete Encirclement:
+          </div>
+          When we add the gematria values of all six <strong>milui</strong>{" "}
+          (divine name spellings) used during the lulav shakings, we reach a
+          profound total:{" "}
+          <span className="gematria">
+            עב (72) + סג (63) + מה (45) + עב (72) + סג (63) + מה (45) = 360
+          </span>
+          . This equals the degrees in a complete circle, revealing that through
+          the six directional movements, we create a perfect sphere of divine
+          protection around ourselves. Just as{" "}
+          <span className="gematria">360</span> represents geometric
+          completeness, our waving establishes <strong>שלימות</strong>{" "}
+          (wholeness) - we are completely surrounded by divine consciousness
+          flowing from all directions.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">The Sukkah Connection:</div>
+          Just as the Clouds of Glory traveled from place to place yet were
+          considered "in their place" because they followed divine will ("על פי
+          ה' יחנו ועל פי ה' יסעו"), so too one who accepts the yoke of Heaven
+          (represented by the final ה) remains spiritually "in place" regardless
+          of which divine emanation they receive. This is the deeper meaning of
+          dwelling in the sukkah during the festival.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">Essential Concept:</div>
+          The final ה (Hey) of Hashem's name יהוה remains stationary during all
+          shakings, representing Malchut (Kingship) which receives from all
+          directions. We permute only the first three letters (יהו) in 6
+          different combinations for each direction, totaling 18 letters and 18
+          shakings - corresponding to the word חי (Life).
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            Drawing Down Divine Knowledge (Daas):
+          </div>
+          The Four Species come "to draw down from Supernal Daas" - divine
+          knowledge that expands and matures the soul. Just as physical trees
+          grow through water, your soul grows through the influence of{" "}
+          <strong>דעת</strong> flowing from Above. When you shake the lulav in
+          all directions, you're literally watering your spiritual "tree of the
+          field" - drawing divine consciousness into every aspect of your being.
+          The <strong>נענועים</strong> (shakings) draw vitality into the root of
+          your soul's knowledge, bringing hidden divine light into the details
+          of every middah (character trait).
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">Touching the Tree of Life:</div>
+          After Yom Kippur's purification, you've returned to the level of Adam
+          before the sin. The lulav shaking is your "stretching forth the hand
+          to the Tree of Life" - no longer forbidden, but actively encouraged.
+          The word <strong>לולב</strong> equals <strong>חיים</strong> (life) in
+          gematria, making this a literal grasping of eternal life. Each
+          directional movement defeats the "flame of the ever-turning sword"
+          that once blocked access to the Tree, transforming spiritual obstacles
+          into pathways of connection.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            Unifying All Divisions - The Four Rivers:
+          </div>
+          Your lulav movements correspond to the four rivers that flowed from
+          Eden before they separated and created all divisions in the world.
+          When you shake toward all directions, you're awakening the original
+          unified river that existed before separation. This draws peace between
+          all conflicts - within yourself, between people, and in the world. The
+          name <strong>אהרן</strong> equals <strong>נהר א</strong> (River One),
+          and four times this value equals the gematria of all Four Species
+          together (לולב אתרוג הדס ערבה), showing how unity encompasses all
+          divisions.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            The Precedence of Action Before Understanding:
+          </div>
+          By mentioning the <strong>אתרוג</strong> first among the Four Species,
+          the Torah reveals the power of "נעשה ונשמע" - doing before
+          understanding. When you lift the etrog (representing{" "}
+          <strong>מלכות</strong>/action) before the other species, you're
+          demonstrating Israel's unique ability to act from pure faith, like the
+          ministering angels. This silences all heavenly accusations and shows
+          that your service transcends intellectual comprehension, reaching the
+          realm of pure devotion.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            Rectifying the Original Sin of Separation:
+          </div>
+          The <strong>אתרוג</strong> is the only fruit where the tree and fruit
+          taste the same - rectifying the primordial sin when Earth failed to
+          make trees taste like their fruit. When you hold the etrog during
+          shaking, you're healing the original separation between giver and
+          receiver, source and result. This restores the intended unity where{" "}
+          <strong>משפיע</strong> (giver) and <strong>מקבל</strong> (receiver)
+          exist in perfect harmony, eliminating the root of all subsequent
+          separations in creation.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">Protection from the Evil Eye:</div>
+          The sukkah and Four Species create protection from{" "}
+          <strong>עין הרע</strong> (evil eye), just as the Clouds of Glory
+          protected Israel from Bilam's attempted curse. Each shake creates a
+          barrier of holy consciousness around you. The three mentions of
+          "sukkah" in the Torah equal the gematria of <strong>רגע</strong>{" "}
+          (moment) - the daily moment of divine anger that the evil eye tries to
+          exploit. Your movements transform this moment of potential
+          vulnerability into one of spiritual empowerment.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            The Spine of Connection - Mind to Heart:
+          </div>
+          The <strong>לולב</strong> represents your spinal column - the channel
+          connecting mind and heart. As you shake it, visualize divine
+          consciousness flowing from your intellect down through your spine into
+          your heart, then spreading to all your limbs. The lulav binds together
+          with <strong>הדסים</strong> and <strong>ערבות</strong> because it
+          contains the root of unity between all separations, awakening "one
+          heart to our Father in Heaven" throughout your entire being.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">Descent of Patriarchal Holiness:</div>
+          The three <strong>הדסים</strong> (myrtles) represent the three
+          Patriarchs whose holiness descends through joy to the lowest levels.
+          When you shake toward the different directions, you're drawing the
+          elevated <strong>מידות</strong> of <strong>חסד, גבורה, ותפארת</strong>{" "}
+          down to your feet - the <strong>מידות</strong> of{" "}
+          <strong>נצח, הוד, יסוד</strong>. This shows that your joy in mitzvot
+          isn't merely "joy of the feet" but channels supreme holiness from the
+          highest levels into physical action.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">Spreading into Seventy Languages:</div>
+          The <strong>ערבות</strong> (willows) represent the spreading of divine
+          unity into all seventy languages and nations. <strong>ערבה</strong> is
+          the acronym for <strong>ע׳ רבה</strong> (Great Seventy), corresponding
+          to the large <strong>ע</strong> in <strong>שמע ישראל</strong>. When
+          you shake the willows, you're extending the proclamation of divine
+          oneness into every corner of creation, preparing the world for the
+          revelation when all nations will recognize the one Creator.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">Weapons of Holy War:</div>
+          The Zohar calls the Four Species <strong>מאני קרבא</strong> (weapons
+          of battle) against the <strong>סטרא אחרא</strong>. Each shake is
+          literally a strike against forces of spiritual impurity. Like the{" "}
+          <strong>להט החרב המתהפכת</strong> (flaming sword) that once blocked
+          the Tree of Life, your movements create permutations of the divine
+          name that transform obstacles into gateways. The{" "}
+          <strong>הידור מצוה</strong> (beautification) itself becomes part of
+          the "written judgment" against evil.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            Dwelling in the Shadow of Faith - צלא דמהמנותא:
+          </div>
+          The Zohar calls the sukkah <strong>צלא דמהמנותא</strong> (the shadow
+          of faith). Just as your physical shadow reflects every movement you
+          make, everything you do in the lower world awakens corresponding
+          reactions above. Your sukkah mirrors a <strong>סוכה עליונה</strong>{" "}
+          (supernal sukkah) that exists at the highest spiritual level, with no
+          barrier between it and the <strong>אור אין סוף</strong> (Infinite
+          Light). When you perform the lulav movements within this shadow of
+          faith, you're creating perfect correspondence between your physical
+          actions and their supernal archetypes, making the infinite accessible
+          through the finite.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            From Concealment to Revelation - העלם להתגלות:
+          </div>
+          Your lulav practice follows the divine pattern of drawing from{" "}
+          <strong>העלם</strong> (concealment) to <strong>התגלות</strong>{" "}
+          (revelation). In Rosh Hashanah, the <strong>תקיעות שופר</strong>{" "}
+          represent <strong>קול בלא דבור</strong> (voice without speech) - pure
+          concealment. In Yom Kippur there's partial revelation through prayers
+          and afflictions. In Sukkot, you take the Four Species in revelation,
+          yet still conceal yourself in the sukkah until{" "}
+          <strong>שמיני עצרת</strong> brings complete revelation. Each shake
+          draws hidden divine potentials into manifest reality, making the
+          concealed accessible to your consciousness.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            The Four Species as Your Complete Human Anatomy:
+          </div>
+          The Four Species correspond precisely to human anatomy:{" "}
+          <strong>לולב</strong> resembles the spine, <strong>אתרוג</strong> the
+          heart, <strong>ערבה</strong> the lips, and <strong>הדס</strong> the
+          eyes. This teaches that through Torah study and mitzvah performance,
+          you sanctify your entire physical being. When you wave them together,
+          you're unifying all your bodily functions in divine service - your
+          vision (<strong>הדס</strong>), speech (<strong>ערבה</strong>),
+          emotional center (<strong>אתרוג</strong>), and neural system (
+          <strong>לולב</strong>) all become vehicles for holiness.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            The Prophetic Level - Moses as מלאך and Your Lulav:
+          </div>
+          The Midrash teaches that prophets are called <strong>מלאכים</strong>{" "}
+          (angels), and Moses exemplified this: "From his middle up - God, from
+          his middle down - man." He would grasp supernal holiness and bring it
+          down to Israel through <strong>רצוא ושוב</strong> (running and
+          returning). Your lulav movements mirror this prophetic function - you
+          wave upward to cleave to supernal levels (<strong>רצוא</strong>), then
+          bring the <strong>לולב</strong> toward your heart (
+          <strong>שוב</strong>) to channel that holiness into this world. Each
+          wave brings down a higher aspect than before, making you a conduit for
+          divine influence like Moses.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">The Hidden Speech of Your Heart:</div>
+          There exists <strong>דיבור פנימי והבל פנימי</strong> (inner speech and
+          inner breath) that rises from the heart, for <strong>הלב</strong>{" "}
+          (heart) has the same letters as <strong>הבל</strong> (breath). This is
+          the deeper meaning of <strong>דברתי אני עם לבבי</strong> ("I spoke
+          with my heart"). When you bring the lulav toward your heart during{" "}
+          <strong>הובאה</strong>, you're connecting to this inner voice - the
+          soul's direct communication with the Divine that transcends
+          articulated prayer. Your heart speaks constantly to Hashem; the lulav
+          movements amplify and sanctify this hidden conversation.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">Three Within Three - תלת גו תלת:</div>
+          Everything in creation follows the pattern <strong>
+            תלת גו תלת
+          </strong>{" "}
+          (three within three), like the letter <strong>למד</strong> which has
+          three sections, and like a human being with head, torso, and lower
+          body. Even a fetus lies <strong>תלת גו תלת</strong> in its mother's
+          womb. Your lulav movements embody this fundamental structure - each
+          direction contains beginning, middle, and end phases. This threefold
+          pattern connects teacher's intellect to student through analogy, just
+          as your movements connect supernal wisdom to your understanding
+          through the intermediate realm of action.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            The Sweetening of 320 Harsh Judgments:
+          </div>
+          <strong>לב</strong> (heart) multiplied by ten equals{" "}
+          <strong>שך</strong> (320), representing the 320 harsh judgments that
+          need sweetening. Through drawing from the root via the ten attributes,
+          you draw ten holinesses to the heart, thereby sweetening all
+          judgments. When you make <strong>הקפות</strong> (circuits) with the
+          species, you're symbolically covering the <strong>שכינה</strong> like
+          the rooster covers its mate with wings, promising protection. This
+          circling motion distributes the sweetening influence throughout all
+          320 aspects of potential severity.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            The Humility of Nothingness - עניוה and אין:
+          </div>
+          True humility means holding yourself as <strong>אין ואפס</strong>{" "}
+          (nothing and naught), constantly remembering that{" "}
+          <strong>לית אתר פנוי מיניה</strong> (there is no place devoid of Him).
+          One who achieves this nothingness has true joy because he seeks
+          nothing for himself, knowing he is nothing. His joy comes purely from
+          magnifying divine honor. Through such humility, you draw from the
+          supernal source of <strong>אין</strong> (nothingness) that preceded
+          creation. This is the deeper meaning of raising and lowering the lulav
+          - drawing from <strong>שם אהיה</strong> (the divine name of becoming)
+          to <strong>הויה</strong> through the consciousness of{" "}
+          <strong>מה ואין</strong>.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            The תיומת - Wholeness of Heart and Faith:
+          </div>
+          If the <strong>תיומת</strong> (center shoot) separates from the lulav,
+          it's invalid because your heart must be whole. <strong>לב</strong>{" "}
+          means "in the middle" - you unify all limbs to the heart to be
+          obedient to the intellect in the brain. <strong>תיומת</strong> relates
+          to <strong>תמים תהיה עם ה׳ אלקיך</strong> ("You shall be wholehearted
+          with the Lord your God"). In the word <strong>אמת</strong> (truth) are
+          beginning (<strong>א</strong>), middle (<strong>מ</strong>), and end (
+          <strong>ת</strong>) - your faith must encompass all aspects of
+          existence to be complete.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            The Lulav as Letter ו - Pillar Connecting Heaven and Earth:
+          </div>
+          The <strong>לולב</strong> is shaped like the letter <strong>ו</strong>{" "}
+          (vav), which serves as a pillar and seal connecting heaven and earth.
+          Like the verse <strong>צדיק כתמר יפרח</strong> ("The righteous shall
+          flourish like a palm tree"), the Sages taught "The world stands on one
+          pillar, and righteous is its name." Your lulav becomes this pillar -
+          the <strong>ו</strong> that connects all levels of reality, channeling
+          divine influence from the highest source down through all worlds to
+          manifest in your physical environment.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            Sweetening the 320 Judgments Through Heart-Centered Practice:
+          </div>
+          <strong>לב</strong> (heart) multiplied by ten equals{" "}
+          <strong>שך</strong> (320) - the harsh judgments that need sweetening.
+          Through drawing from the supernal root via the ten attributes, you
+          draw ten holinesses to your heart, sweetening all judgments. When you
+          bring the species toward your heart during <strong>הובאה</strong>,
+          you're literally channeling divine mercy into the place where harsh
+          judgments are stored, transforming them into vessels for kindness
+          through your heartfelt intention and movement.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            לו לב - Directing Your Heart to Hashem:
+          </div>
+          <strong>לולב</strong> can be read as <strong>לו לב</strong> ("to Him
+          the heart"). The primary purpose is subjugating your heart to Hashem
+          so that your heart obeys your intellect in the brain. Since the{" "}
+          <strong>לולב</strong> alludes to the head and brain rising above, you
+          bless <strong>על נטילת לולב</strong> ("on taking the lulav") because
+          from there comes the primary intellect that causes you to submit to
+          your mind's decisions. Your movements integrate divine consciousness
+          from brain through heart to all limbs.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            The Bound and the Unbound - אגודים ואחוזים:
+          </div>
+          The <strong>לולב</strong> below is bound with{" "}
+          <strong>הדסים וערבות</strong>, while above it extends outside the
+          species bound with it. This teaches that like Moses who grasped
+          himself above to supernal holiness and brought down holiness to Israel
+          (who are <strong>אגודים ואחוזים אלה באלה</strong> - "bound and
+          connected to each other"), your lulav connects the unbound infinite
+          (above) with the bound finite (below). Each time you wave, you bring
+          down a higher aspect than before to this bound world.
+        </div>
+
+        <div className="mystical-note">
+          <div className="note-title">
+            From אין (Nothingness) to Manifestation:
+          </div>
+          Through true humility - holding yourself as <strong>אין ואפס</strong>{" "}
+          (nothing and naught) - you can draw from the supernal source of{" "}
+          <strong>אין</strong> (nothingness) that preceded creation. This is
+          hinted in the <strong>כוונת שבע עליות הלולב והורדתו</strong>{" "}
+          (intention of seven raisings and lowerings of the lulav) - drawing
+          from <strong>שם אהיה במילוי אלפין</strong> to{" "}
+          <strong>הויה במילוי אלפין</strong>. Through becoming{" "}
+          <strong>מה ואין</strong> (what and nothing), you become a vessel for
+          the divine name <strong>אהיה</strong> - the supernal source and will.
+        </div>
       </div>
     </div>
   );
