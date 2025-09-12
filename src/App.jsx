@@ -638,6 +638,84 @@ const LulavChart = () => {
         consciousness flows from the highest source through your heart to
         illuminate each aspect of your being.
       </div>
+
+      <div className="mystical-note">
+        <div className="note-title">
+          The Complete Spiritual Mechanics of Lulav Shaking and Four Species
+          (Based on Lekutei Halachos Succos 4):
+        </div>
+        The <strong>נענועים לששה קצוות העולם</strong> (shakings to six
+        directions of the world) reveal that <strong>מלא כל הארץ כבודו</strong>{" "}
+        ("the whole earth is full of His glory"). Just as we extend the word{" "}
+        <strong>אחד</strong> in Shema to crown Hashem above, below, and in all
+        four directions, so we shake the Four Species up, down, and to all four
+        winds to proclaim His kingship and sovereignty in all realms. Each
+        directional movement declares that <strong>מלכותו בכל משלה</strong> (His
+        kingdom rules over all) - there is no place devoid of divine presence,
+        even in the lowest spiritual levels.
+        <br />
+        <br />
+        The <strong>לולב</strong> represents the <strong>צדיק</strong>{" "}
+        (righteous person) who embodies <strong>כי כל בשמים ובארץ</strong> ("for
+        all is in heaven and earth"). The tzaddik illuminates both{" "}
+        <strong>דרי מעלה</strong> (upper worlds) and <strong>דרי מטה</strong>{" "}
+        (lower worlds), showing the upper worlds that divine presence exists
+        even where they cannot perceive it (<strong>איה מקום כבודו</strong> -
+        "where is the place of His glory"), and revealing to the lower worlds -
+        the <strong>שוכני עפר</strong> (dwellers in dust) - that{" "}
+        <strong>ה׳ עמם</strong> (Hashem is with them). Your lulav movements
+        channel this dual illumination, awakening both transcendent and immanent
+        awareness.
+        <br />
+        <br />
+        Each species represents different levels of spiritual perception:{" "}
+        <strong>הדס</strong> (myrtle) has <strong>ריח ולא טעם</strong>{" "}
+        (fragrance without taste), representing <strong>דרי מעלה</strong> whose
+        perception is like <strong>מאן דארח ריחא</strong> (one who smells a
+        fragrance) - subtle, transcendent, beyond grasp. The Sages taught that
+        the <strong>נשמה</strong> (soul) benefits only from <strong>ריח</strong>{" "}
+        (fragrance) because <strong>הנשמה היא בחינת דרי מעלה</strong> (the soul
+        is of the aspect of upper worlds). <strong>ריח</strong> represents what
+        cannot be grasped or seen - transcendent perception beyond physical
+        grasp.
+        <br />
+        <br />
+        <strong>ערבי נחל</strong> (willows) have neither taste nor fragrance,
+        representing <strong>פושעי ישראל</strong> and <strong>שוכני עפר</strong>
+        . The <strong>לולב</strong> has <strong>טעם ולא ריח</strong> (taste
+        without fragrance) because the tzaddik's main illumination is for{" "}
+        <strong>דרי מטה</strong>, whose perception is <strong>טעם</strong> -
+        tangible, felt internally through sight and experience.{" "}
+        <strong>טעם</strong> (taste) depends on <strong>ראייה</strong> (sight)
+        and represents <strong>דרי מטה</strong> perception of{" "}
+        <strong>מלא כל הארץ כבודו</strong>.
+        <br />
+        <br />
+        The <strong>אתרוג</strong> has both <strong>ריח וטעם</strong> (fragrance
+        and taste), representing <strong>כללות העולמות</strong> (integration of
+        all worlds) necessary for <strong>יראה</strong> (divine awe). As{" "}
+        <strong>בחינת מלכות</strong>, the etrog creates the reverent awareness
+        that unifies transcendent perception (fragrance) with immanent
+        perception (taste). You must include both the subtle perception of{" "}
+        <strong>דרי מעלה</strong> (<strong>איה</strong> - where is He) and the
+        tangible perception of <strong>דרי מטה</strong> (
+        <strong>מלא כל הארץ כבודו</strong>) together to achieve true{" "}
+        <strong>יראה</strong> - the awe that comes from recognizing divine
+        presence in all levels simultaneously.
+        <br />
+        <br />
+        The <strong>נענועים</strong> (shakings) are like waking someone from
+        sleep - when you want to rouse a person, you shake and stir them until
+        they awaken. Your lulav movements perform this cosmic awakening,{" "}
+        <strong>מנערין ומנענעין כל השוכני עפר שיקוצו משנתם</strong> (shaking and
+        stirring all the dwellers in dust so they awaken from their sleep). Even
+        the <strong>ערבי נחל</strong> (willows representing sinners) are bound
+        together with the tzaddik's lulav, showing that they too can connect to
+        righteousness and should never despair, for{" "}
+        <strong>מלא כל הארץ כבודו</strong> - divine glory fills even the lowest
+        places.
+      </div>
+
       <div className="mystical-note">
         <div className="note-title">
           The Mathematics of Divine Completion - Shema and Baruch Shem:
