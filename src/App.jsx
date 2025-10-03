@@ -13,58 +13,6 @@ const LulavChart = () => {
       <h1>🌿 Kavanos for Shaking the Lulav - Na'anuim 🌿</h1>
 
       <div className="mystical-note">
-        <div className="note-title">
-          The Mystical Mechanics of הולכה (Going Out):
-        </div>
-        When extending the lulav away from your body, you're performing a cosmic
-        act of <span className="gematria">רצוא</span> (running forth) - reaching
-        toward <strong>יושב במרומים</strong> (He who dwells on high) to request
-        the opening of divine treasure houses. Each extension creates a
-        protective barrier of holy consciousness, like the{" "}
-        <strong>להט החרב המתהפכת</strong> (flaming sword) but in holiness -
-        permutations of the divine name that transform spiritual obstacles into
-        stepping stones. You're literally reaching from the world of limitation
-        toward the unlimited, requesting that <strong>דעת עליון</strong>{" "}
-        (supernal knowledge) flow down to make divine reality tangible in your
-        daily life.
-      </div>
-
-      <div className="mystical-note">
-        <div className="note-title">
-          The Sacred Integration of הבאה (Coming In):
-        </div>
-        The Arizal teaches that when drawing the lulav back toward your heart,
-        make a small <strong>הכאה</strong> (striking motion) against your body -
-        this physically integrates the <strong>מוחין</strong> (divine
-        consciousness) into your flesh until the <strong>מידות</strong> emerge
-        in actual revelation. This is <span className="gematria">שוב</span>{" "}
-        (returning) - bringing the unlimited light into <strong>מלכות</strong>,
-        the world of limitation, where it can illuminate your emotions,
-        thoughts, and deeds. Each "coming in" motion draws divine awareness
-        deeper, until your knowledge of Hashem becomes <strong>חיה</strong>{" "}
-        (alive) and tangible. The final <strong>ה</strong> of the divine name
-        receives from all directions - your heart becomes the dwelling place
-        where <strong>נווה אפריון</strong> (the beautiful pavilion) is
-        established, making your body a <strong>מכון בית אלקינו</strong>{" "}
-        (foundation for the house of our God).
-      </div>
-
-      <div className="mystical-note">
-        <div className="note-title">
-          The Four Species as a Living Divine Name:
-        </div>
-        When you grasp the <strong>ד' המינים</strong> together, you're literally
-        holding the four letters of <span className="gematria">שם הוי"ה</span>{" "}
-        in physical form: <strong>הדסים</strong> (myrtle) embody the{" "}
-        <strong>יו"ד</strong> - the divine point of initial will;{" "}
-        <strong>ערבות</strong> (willows) manifest the first <strong>ה'</strong>{" "}
-        - divine understanding flowing down; <strong>לולב</strong> (palm)
-        channels the <strong>ו'</strong> - the connecting line between upper and
-        lower; and <strong>אתרוג</strong> (etrog) receives as the final{" "}
-        <strong>ה'</strong> - malchut that integrates all divine emanations.
-      </div>
-
-      <div className="mystical-note">
         <div className="note-title">Daily Sefirot Focus - Select Your Day:</div>
         <select
           className="day-selector"
@@ -625,6 +573,58 @@ const LulavChart = () => {
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <div className="mystical-note">
+        <div className="note-title">
+          The Mystical Mechanics of הולכה (Going Out):
+        </div>
+        When extending the lulav away from your body, you're performing a cosmic
+        act of <span className="gematria">רצוא</span> (running forth) - reaching
+        toward <strong>יושב במרומים</strong> (He who dwells on high) to request
+        the opening of divine treasure houses. Each extension creates a
+        protective barrier of holy consciousness, like the{" "}
+        <strong>להט החרב המתהפכת</strong> (flaming sword) but in holiness -
+        permutations of the divine name that transform spiritual obstacles into
+        stepping stones. You're literally reaching from the world of limitation
+        toward the unlimited, requesting that <strong>דעת עליון</strong>{" "}
+        (supernal knowledge) flow down to make divine reality tangible in your
+        daily life.
+      </div>
+
+      <div className="mystical-note">
+        <div className="note-title">
+          The Sacred Integration of הבאה (Coming In):
+        </div>
+        The Arizal teaches that when drawing the lulav back toward your heart,
+        make a small <strong>הכאה</strong> (striking motion) against your body -
+        this physically integrates the <strong>מוחין</strong> (divine
+        consciousness) into your flesh until the <strong>מידות</strong> emerge
+        in actual revelation. This is <span className="gematria">שוב</span>{" "}
+        (returning) - bringing the unlimited light into <strong>מלכות</strong>,
+        the world of limitation, where it can illuminate your emotions,
+        thoughts, and deeds. Each "coming in" motion draws divine awareness
+        deeper, until your knowledge of Hashem becomes <strong>חיה</strong>{" "}
+        (alive) and tangible. The final <strong>ה</strong> of the divine name
+        receives from all directions - your heart becomes the dwelling place
+        where <strong>נווה אפריון</strong> (the beautiful pavilion) is
+        established, making your body a <strong>מכון בית אלקינו</strong>{" "}
+        (foundation for the house of our God).
+      </div>
+
+      <div className="mystical-note">
+        <div className="note-title">
+          The Four Species as a Living Divine Name:
+        </div>
+        When you grasp the <strong>ד' המינים</strong> together, you're literally
+        holding the four letters of <span className="gematria">שם הוי"ה</span>{" "}
+        in physical form: <strong>הדסים</strong> (myrtle) embody the{" "}
+        <strong>יו"ד</strong> - the divine point of initial will;{" "}
+        <strong>ערבות</strong> (willows) manifest the first <strong>ה'</strong>{" "}
+        - divine understanding flowing down; <strong>לולב</strong> (palm)
+        channels the <strong>ו'</strong> - the connecting line between upper and
+        lower; and <strong>אתרוג</strong> (etrog) receives as the final{" "}
+        <strong>ה'</strong> - malchut that integrates all divine emanations.
       </div>
 
       <div className="mystical-note">
