@@ -35,9 +35,11 @@ const LulavChart = () => {
           <div className="note-title">
             Day 1 - Chesed (Loving-kindness) - אברהם אבינו
           </div>
-          <strong>Divine Name Meditation:</strong> Focus on שם הוי"ה with
-          voweling of <span className="gematria">סגול</span>, arousing flames of
-          divine love in your heart.
+          <strong>Divine Name Meditation:</strong> Focus on{" "}
+          <span className="gematria" style={{ fontSize: "20px" }}>
+            יֶהֶוֶהֶ
+          </span>
+          , arousing flames of divine love in your heart.
           <br />
           <br />
           <strong>Primary Intention:</strong> "Let divine love flow through me
@@ -79,9 +81,11 @@ const LulavChart = () => {
           <div className="note-title">
             Day 2 - Gevurah (Divine Strength) - יצחק אבינו
           </div>
-          <strong>Divine Name Meditation:</strong> Focus on שם הוי"ה with
-          voweling of <span className="gematria">שבא</span>, arousing tremendous
-          awe of Hashem.
+          <strong>Divine Name Meditation:</strong> Focus on{" "}
+          <span className="gematria" style={{ fontSize: "20px" }}>
+            יְהְוְהְ
+          </span>
+          , arousing tremendous awe of Hashem.
           <br />
           <br />
           <strong>Primary Intention:</strong> "Strengthen me with proper fear of
@@ -126,9 +130,11 @@ const LulavChart = () => {
           <div className="note-title">
             Day 3 - Tiferet (Divine Beauty) - יעקב אבינו
           </div>
-          <strong>Divine Name Meditation:</strong> Focus on שם הוי"ה with
-          voweling of <span className="gematria">חולם</span>, feeling the
-          harmony between chesed and gevurah.
+          <strong>Divine Name Meditation:</strong> Focus on{" "}
+          <span className="gematria" style={{ fontSize: "20px" }}>
+            יֹהֹוֹהֹ
+          </span>
+          , feeling the harmony between chesed and gevurah.
           <br />
           <br />
           <strong>Primary Intention:</strong> "Help me feel truly connected to
@@ -173,8 +179,18 @@ const LulavChart = () => {
           <div className="note-title">
             Day 4 - Netzach (Eternal Victory) - משה רבינו
           </div>
-          <strong>Primary Intention:</strong> "Give me strength to overcome
-          spiritual obstacles and persist even when I don't feel inspired."
+          <strong>Divine Name Meditation:</strong> Focus on{" "}
+          <span className="gematria" style={{ fontSize: "20px" }}>
+            יִהִוִהִ
+          </span>{" "}
+          , channeling divine persistence and victory.
+          <strong>
+            <br />
+            <br />
+            Primary Intention:
+          </strong>{" "}
+          "Give me strength to overcome spiritual obstacles and persist even
+          when I don't feel inspired."
           <br />
           <br />
           <strong>The Power of Memory:</strong> Even when you don't have "מוחין"
@@ -217,6 +233,13 @@ const LulavChart = () => {
           <div className="note-title">
             Day 5 - Hod (Acknowledgment) - אהרן הכהן
           </div>
+          <strong>Divine Name Meditation:</strong> Focus on{" "}
+          <span className="gematria" style={{ fontSize: "20px" }}>
+            יֻהֻוֻהֻ
+          </span>{" "}
+          cultivating gratitude and acknowledgment of the Divine.
+          <br />
+          <br />
           <strong>Primary Intention:</strong> "Let me truly recognize that
           everything comes from You and constantly give thanks."
           <br />
@@ -262,6 +285,13 @@ const LulavChart = () => {
           <div className="note-title">
             Day 6 - Yesod (Foundation) - יוסף הצדיק
           </div>
+          <strong>Divine Name Meditation:</strong> Focus on{" "}
+          <span className="gematria" style={{ fontSize: "20px" }}>
+            יוּהוּווּהוּ
+          </span>{" "}
+          establishing purity and holy connection.
+          <br />
+          <br />
           <strong>Primary Intention:</strong> "Keep me faithful and connected to
           You in all circumstances, pure in my intentions and desires."
           <br />
