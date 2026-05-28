@@ -1,5 +1,5 @@
-import React, { useRef, useState, Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import React, { useRef, useState, Suspense, useMemo } from "react";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import {
   OrbitControls,
   PerspectiveCamera,
@@ -16,98 +16,155 @@ import { Link } from "react-router-dom";
 import * as THREE from "three";
 import "./DaledMinum3D.css";
 import "./InfoPanel.css";
+import chassidImage from "./assets/chassidlulavesrog.png";
 
-// Chassid Figure Component
+// Clickable Indicator Component with Pulsing Animation
+function ClickableIndicator({ position, color, onClick, label }) {
+  const meshRef = useRef();
+  const [hovered, setHovered] = useState(false);
+
+  useFrame((state) => {
+    if (meshRef.current) {
+      // Pulsing animation
+      const scale = 1 + Math.sin(state.clock.elapsedTime * 2) * 0.2;
+      meshRef.current.scale.set(scale, scale, scale);
+    }
+  });
+
+  return (
+    <group position={position}>
+      {/* Larger invisible clickable area */}
+      <mesh
+        onClick={(e) => {
+          e.stopPropagation();
+          onClick();
+        }}
+        onPointerOver={(e) => {
+          e.stopPropagation();
+          setHovered(true);
+          document.body.style.cursor = 'pointer';
+        }}
+        onPointerOut={(e) => {
+          e.stopPropagation();
+          setHovered(false);
+          document.body.style.cursor = 'auto';
+        }}
+      >
+        <circleGeometry args={[0.35, 32]} />
+        <meshStandardMaterial
+          transparent={true}
+          opacity={0}
+        />
+      </mesh>
+
+      {/* Visible outer ring */}
+      <mesh ref={meshRef} position={[0, 0, 0.01]}>
+        <ringGeometry args={[0.18, 0.25, 32]} />
+        <meshStandardMaterial
+          color={color}
+          transparent={true}
+          opacity={hovered ? 0.9 : 0.6}
+          emissive={color}
+          emissiveIntensity={hovered ? 0.8 : 0.4}
+          side={THREE.DoubleSide}
+        />
+      </mesh>
+
+      {/* Inner dot */}
+      <mesh position={[0, 0, 0.02]}>
+        <circleGeometry args={[0.13, 32]} />
+        <meshStandardMaterial
+          color={color}
+          transparent={true}
+          opacity={hovered ? 0.8 : 0.5}
+          emissive={color}
+          emissiveIntensity={hovered ? 0.7 : 0.4}
+          side={THREE.DoubleSide}
+        />
+      </mesh>
+
+      {/* Label on hover */}
+      {hovered && (
+        <Html distanceFactor={8} position={[0, 0.5, 0]}>
+          <div style={{
+            background: 'rgba(0,0,0,0.85)',
+            color: 'white',
+            padding: '8px 12px',
+            borderRadius: '8px',
+            fontSize: '14px',
+            fontWeight: 'bold',
+            whiteSpace: 'nowrap',
+            pointerEvents: 'none',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.5)'
+          }}>
+            {label}
+          </div>
+        </Html>
+      )}
+    </group>
+  );
+}
+
+// Chassid Figure Component with Image
 function ChassidFigure({ onClick }) {
   const groupRef = useRef();
+  const texture = useLoader(THREE.TextureLoader, chassidImage);
 
   useFrame((state) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
+      groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.3) * 0.05;
       groupRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
     }
   });
 
   return (
-    <Float speed={2} rotationIntensity={0.2} floatIntensity={0.5}>
+    <Float speed={2} rotationIntensity={0.1} floatIntensity={0.3}>
       <group ref={groupRef} position={[0, 0, 0]}>
-        {/* Head */}
-        <mesh position={[0, 2.5, 0]} castShadow>
-          <sphereGeometry args={[0.35, 32, 32]} />
-          <meshStandardMaterial color="#f5d5b8" />
-        </mesh>
-
-        {/* Hat */}
-        <mesh position={[0, 2.9, 0]} castShadow>
-          <cylinderGeometry args={[0.38, 0.35, 0.4, 32]} />
-          <meshStandardMaterial color="#1a1a1a" />
-        </mesh>
-
-        {/* Beard */}
-        <mesh position={[0, 2.2, 0.15]} castShadow>
-          <boxGeometry args={[0.4, 0.3, 0.2]} />
-          <meshStandardMaterial color="#3a3a3a" />
-        </mesh>
-
-        {/* Body */}
-        <mesh position={[0, 1.2, 0]} castShadow>
-          <cylinderGeometry args={[0.4, 0.5, 1.8, 32]} />
-          <meshStandardMaterial color="#0a0a0a" />
-        </mesh>
-
-        {/* White shirt */}
-        <mesh position={[0, 1.6, 0.35]} castShadow>
-          <boxGeometry args={[0.3, 0.6, 0.1]} />
-          <meshStandardMaterial color="#ffffff" />
-        </mesh>
-
-        {/* Arms */}
-        <mesh position={[-0.5, 1.3, 0]} castShadow rotation={[0, 0, 0.3]}>
-          <cylinderGeometry args={[0.1, 0.1, 0.8, 16]} />
-          <meshStandardMaterial color="#0a0a0a" />
-        </mesh>
-        <mesh position={[0.5, 1.3, 0]} castShadow rotation={[0, 0, -0.3]}>
-          <cylinderGeometry args={[0.1, 0.1, 0.8, 16]} />
-          <meshStandardMaterial color="#0a0a0a" />
-        </mesh>
-
-        {/* Lulav - tall palm branch */}
-        <group position={[0, 1.2, 0.4]}>
-          <mesh castShadow onClick={() => onClick("lulav")}>
-            <cylinderGeometry args={[0.05, 0.05, 2, 16]} />
-            <meshStandardMaterial color="#8b7355" />
-          </mesh>
-          {/* Palm leaves at top */}
-          <mesh position={[0, 1.1, 0]} castShadow>
-            <coneGeometry args={[0.2, 0.5, 8]} />
-            <meshStandardMaterial color="#7cb342" />
-          </mesh>
-        </group>
-
-        {/* Etrog - glowing citron */}
-        <mesh position={[0.4, 0.9, 0.5]} castShadow onClick={() => onClick("etrog")}>
-          <sphereGeometry args={[0.15, 32, 32]} />
+        {/* Main image plane with the Chassid */}
+        <mesh position={[0, 1.5, 0]}>
+          <planeGeometry args={[3, 4]} />
           <meshStandardMaterial
-            color="#fdd835"
-            emissive="#fdd835"
-            emissiveIntensity={0.3}
+            map={texture}
+            transparent={true}
+            side={THREE.DoubleSide}
           />
         </mesh>
 
-        {/* Hadassim - myrtle branch (single) */}
-        <mesh position={[0.15, 1.4, 0.45]} castShadow onClick={() => onClick("hadassim")}>
-          <cylinderGeometry args={[0.08, 0.05, 0.6, 8]} />
-          <meshStandardMaterial color="#4caf50" />
-        </mesh>
+        {/* Clickable indicators for each species */}
+        {/* Etrog - RIGHT hand (viewer's left side) */}
+        <ClickableIndicator
+          position={[0.5, 1.0, 0.15]}
+          color="#fdd835"
+          onClick={() => onClick("etrog")}
+          label="Etrog 🍋"
+        />
 
-        {/* Aravot - willow branch */}
-        <mesh position={[-0.15, 1.4, 0.45]} castShadow onClick={() => onClick("aravot")}>
-          <cylinderGeometry args={[0.06, 0.04, 0.7, 8]} />
-          <meshStandardMaterial color="#81c784" />
-        </mesh>
+        {/* Lulav - LEFT hand, top of palm branch (viewer's right side) */}
+        <ClickableIndicator
+          position={[-0.6, 2.8, 0.15]}
+          color="#8b7355"
+          onClick={() => onClick("lulav")}
+          label="Lulav 🌿"
+        />
+
+        {/* Hadassim - LEFT hand, left branches (viewer's right side) */}
+        <ClickableIndicator
+          position={[-0.8, 1.8, 0.15]}
+          color="#4caf50"
+          onClick={() => onClick("hadassim")}
+          label="Hadassim 🍃"
+        />
+
+        {/* Aravot - LEFT hand, right branches (viewer's right side) */}
+        <ClickableIndicator
+          position={[-0.4, 1.8, 0.15]}
+          color="#81c784"
+          onClick={() => onClick("aravot")}
+          label="Aravot 🌾"
+        />
 
         {/* Sparkles around the figure */}
-        <Sparkles count={50} scale={3} size={2} speed={0.4} color="#ffd700" />
+        <Sparkles count={50} scale={4} size={2} speed={0.4} color="#ffd700" />
       </group>
     </Float>
   );
