@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import DaledMinum3DScene from "./DaledMinum3DScene";
 
 const LulavChart = () => {
   const [selectedDay, setSelectedDay] = useState("");
@@ -10,7 +12,12 @@ const LulavChart = () => {
 
   return (
     <div className="container">
-      <h1>🌿 Kavanos for Shaking the Lulav - Na'anuim 🌿</h1>
+      <div className="nav-header">
+        <h1>🌿 Kavanos for Shaking the Lulav - Na'anuim 🌿</h1>
+        <Link to="/3d-scene" className="experience-link" style={{ background: 'linear-gradient(135deg, #7cb342, #558b2f)' }}>
+          🎮 Enter 3D Interactive Experience
+        </Link>
+      </div>
 
       <div className="mystical-note">
         <div className="note-title">Daily Sefirot Focus - Select Your Day:</div>
@@ -1236,4 +1243,15 @@ const LulavChart = () => {
   );
 };
 
-export default LulavChart;
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LulavChart />} />
+        <Route path="/3d-scene" element={<DaledMinum3DScene />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
