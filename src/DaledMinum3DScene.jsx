@@ -16,7 +16,6 @@ import { Link } from "react-router-dom";
 import * as THREE from "three";
 import "./DaledMinum3D.css";
 import "./InfoPanel.css";
-import chassidImage from "./assets/chassidlulavesrog.png";
 
 // Clickable Indicator Component with Pulsing Animation
 function ClickableIndicator({ position, color, onClick, label }) {
@@ -108,7 +107,7 @@ function ClickableIndicator({ position, color, onClick, label }) {
 // Chassid Figure Component with Image
 function ChassidFigure({ onClick }) {
   const groupRef = useRef();
-  const texture = useLoader(THREE.TextureLoader, chassidImage);
+  const texture = useLoader(THREE.TextureLoader, '/chassidlulavesrog.png');
 
   useFrame((state) => {
     if (groupRef.current) {
@@ -149,7 +148,7 @@ function ChassidFigure({ onClick }) {
 
         {/* Hadassim - LEFT hand, left branches (viewer's right side) */}
         <ClickableIndicator
-          position={[-0.8, 1.8, 0.15]}
+          position={[-0.95, 1.7, 0.15]}
           color="#4caf50"
           onClick={() => onClick("hadassim")}
           label="Hadassim 🍃"
@@ -157,7 +156,7 @@ function ChassidFigure({ onClick }) {
 
         {/* Aravot - LEFT hand, right branches (viewer's right side) */}
         <ClickableIndicator
-          position={[-0.4, 1.8, 0.15]}
+          position={[-0.25, 1.9, 0.15]}
           color="#81c784"
           onClick={() => onClick("aravot")}
           label="Aravot 🌾"

@@ -14,8 +14,12 @@ const LulavChart = () => {
     <div className="container">
       <div className="nav-header">
         <h1>🌿 Kavanos for Shaking the Lulav - Na'anuim 🌿</h1>
-        <Link to="/3d-scene" className="experience-link" style={{ background: 'linear-gradient(135deg, #7cb342, #558b2f)' }}>
-          🎮 Enter 3D Interactive Experience
+        <Link
+          to="/3d-scene"
+          className="experience-link"
+          style={{ background: "linear-gradient(135deg, #7cb342, #558b2f)" }}
+        >
+          Enter 3D Interactive Experience
         </Link>
       </div>
 
