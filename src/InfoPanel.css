@@ -5,7 +5,10 @@
   right: -500px;
   width: 450px;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.05);
+  /* Fallback for browsers without backdrop-filter support */
+  background: rgba(20, 30, 45, 0.95);
+  /* Enhanced background for better visibility on mobile */
+  background: linear-gradient(to left, rgba(15, 25, 40, 0.98), rgba(20, 30, 48, 0.96));
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -115,12 +118,16 @@
 
 /* Info Cards */
 .info-card {
+  /* Fallback background for better mobile visibility */
+  background: rgba(30, 40, 60, 0.7);
+  /* Glassmorphism effect for modern browsers */
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 15px;
   padding: 20px;
   margin-bottom: 20px;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   animation: slideInCard 0.5s ease forwards;
   opacity: 0;
