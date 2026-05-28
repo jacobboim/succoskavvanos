@@ -94,19 +94,15 @@ function ChassidFigure({ onClick }) {
           />
         </mesh>
 
-        {/* Hadassim - myrtle branches (left and right) */}
-        <mesh position={[-0.2, 1.4, 0.45]} castShadow onClick={() => onClick("hadassim")}>
-          <cylinderGeometry args={[0.08, 0.05, 0.6, 8]} />
-          <meshStandardMaterial color="#4caf50" />
-        </mesh>
-        <mesh position={[0.2, 1.4, 0.45]} castShadow onClick={() => onClick("hadassim")}>
+        {/* Hadassim - myrtle branch (single) */}
+        <mesh position={[0.15, 1.4, 0.45]} castShadow onClick={() => onClick("hadassim")}>
           <cylinderGeometry args={[0.08, 0.05, 0.6, 8]} />
           <meshStandardMaterial color="#4caf50" />
         </mesh>
 
-        {/* Aravot - willow */}
-        <mesh position={[-0.3, 1.5, 0.4]} castShadow onClick={() => onClick("aravot")}>
-          <cylinderGeometry args={[0.06, 0.04, 0.8, 8]} />
+        {/* Aravot - willow branch */}
+        <mesh position={[-0.15, 1.4, 0.45]} castShadow onClick={() => onClick("aravot")}>
+          <cylinderGeometry args={[0.06, 0.04, 0.7, 8]} />
           <meshStandardMaterial color="#81c784" />
         </mesh>
 
@@ -211,8 +207,8 @@ function EnergyBeam({ from, to, color, visible }) {
 // Main 3D Scene Component
 function Scene3D({ onDirectionClick, onSpeciesClick, selectedDirection, hideLabels }) {
   const directions = [
-    { pos: [4, 0, 0], color: "#FFD700", label: "South", hebrew: "דרום", key: "south" },
-    { pos: [-4, 0, 0], color: "#DC143C", label: "North", hebrew: "צפון", key: "north" },
+    { pos: [4, 0, 0], color: "#DC143C", label: "North", hebrew: "צפון", key: "north" },
+    { pos: [-4, 0, 0], color: "#FFD700", label: "South", hebrew: "דרום", key: "south" },
     { pos: [0, 0, 4], color: "#9370DB", label: "East", hebrew: "מזרח", key: "east" },
     { pos: [0, 0, -4], color: "#4169E1", label: "West", hebrew: "מערב", key: "west" },
     { pos: [0, 4, 0], color: "#FF69B4", label: "Up", hebrew: "מעלה", key: "up" },
@@ -427,22 +423,48 @@ export default function DaledMinum3DScene() {
     lulav: {
       name: "Lulav (לולב)",
       title: "The Palm Branch - Spine of Connection",
-      content: "The lulav represents your spinal column - the channel connecting mind and heart, brain and body. Shaped like the letter ו (vav), it serves as a pillar connecting heaven and earth. The word לולב equals חיים (life) in gematria - you are literally grasping eternal life!"
+      letter: "ו (Vav)",
+      content: "The לולב represents your spinal column - the channel connecting mind and heart, brain and body. Shaped like the letter ו (vav), it serves as a pillar connecting heaven and earth. The word לולב can be read as 'לו לב' - 'to Him the heart', teaching that its primary purpose is subjugating your heart to Hashem.",
+      gematria: "לולב equals חיים (life) in gematria - you are literally grasping eternal life, the Tree of Life itself.",
+      anatomy: "Corresponds to the spine in human anatomy",
+      perception: "Has טעם ולא ריח (taste without fragrance) - representing tangible perception for דרי מטה (lower worlds). The tzaddik's main illumination is for those whose perception is tangible, felt internally through sight and experience.",
+      mechanics: "The לולב requires constant הולכה והבאה (going out and bringing in) because לולב contains the mystical letters ל\"ו ל\"ב (36 and 32) that subjugate the heart and all vitality to the Creator.",
+      practice: "When you raise and lower it, you create a flow of divine consciousness from your intellect down through your spine into your heart, then spreading to all your limbs. The lulav binds with הדסים וערבות below while extending above them, showing how you connect supernal wisdom to lower levels through your central channel.",
+      treeOfLife: "After Yom Kippur's purification, the lulav shaking is your 'stretching forth the hand to the Tree of Life' - no longer forbidden, but actively encouraged. Each directional movement defeats the 'flame of the ever-turning sword' that once blocked access to the Tree."
     },
     etrog: {
       name: "Etrog (אתרוג)",
       title: "The Citron - Heart of Unity",
-      content: "The etrog is unique - the only fruit where the tree and fruit taste the same, rectifying the primordial sin. It has both ריח וטעם (fragrance and taste), representing the integration of all worlds necessary for divine awe."
+      letter: "ה (Hey - Final)",
+      content: "The אתרוג is unique - the only fruit where the tree and fruit taste the same, rectifying the primordial sin when Earth failed to make trees taste like their fruit. It has both ריח וטעם (fragrance and taste), representing the integration of all worlds necessary for יראה (divine awe).",
+      precedence: "By mentioning the etrog first among the Four Species, the Torah reveals the power of 'נעשה ונשמע' - doing before understanding. When you lift the etrog (representing מלכות/action) before the other species, you demonstrate Israel's unique ability to act from pure faith, like the ministering angels.",
+      anatomy: "Corresponds to the heart in human anatomy",
+      malchut: "As בחינת מלכות, the etrog creates the reverent awareness that unifies transcendent perception (fragrance) with immanent perception (taste). You must include both the subtle perception of דרי מעלה (איה - where is He) and the tangible perception of דרי מטה (מלא כל הארץ כבודו) together to achieve true יראה.",
+      rectification: "When you hold the etrog during shaking, you're healing the original separation between giver and receiver, source and result. This restores the intended unity where משפיע (giver) and מקבל (receiver) exist in perfect harmony, eliminating the root of all subsequent separations in creation.",
+      practice: "Imagine the etrog as your heart - each wave draws חסד (divine kindness) from the transcendent level into your heart, which then flows to all corresponding limbs."
     },
     hadassim: {
       name: "Hadassim (הדסים)",
       title: "The Myrtles - Eyes of the Patriarchs",
-      content: "The three hadassim represent the three Patriarchs whose holiness descends through joy to the lowest levels. Has fragrance without taste, representing the upper worlds whose perception is transcendent."
+      letter: "י (Yud)",
+      content: "The three הדסים (myrtles) represent the three Patriarchs whose holiness descends through joy to the lowest levels. Has ריח ולא טעם (fragrance without taste), representing דרי מעלה (upper worlds) whose perception is like מאן דארח ריחא (one who smells a fragrance) - subtle, transcendent, beyond physical grasp.",
+      anatomy: "Corresponds to the eyes in human anatomy",
+      soul: "The Sages taught that the נשמה (soul) benefits only from ריח (fragrance) because הנשמה היא בחינת דרי מעלה - the soul is of the aspect of upper worlds. Fragrance represents what cannot be grasped or seen - transcendent perception beyond physical grasp.",
+      patriarchs: "When you shake toward the different directions, you're drawing the elevated מידות of חסד, גבורה, ותפארת down to your feet - the מידות of נצח, הוד, יסוד. This shows that your joy in mitzvot channels supreme holiness from the highest levels into physical action.",
+      pattern: "Three myrtles represent the threefold pattern תלת גו תלת that exists throughout creation - like the letter למד which has three sections, and like a human being with head, torso, and lower body.",
+      symbolism: "Represents Jewish souls who have good deeds, showing that even elevated spiritual service requires grounding in physical mitzvot."
     },
     aravot: {
       name: "Aravot (ערבות)",
       title: "The Willows - Voice of Unity",
-      content: "Willows have neither taste nor fragrance, yet are bound together showing that no one should despair. Represents the spreading of divine unity into all seventy languages and nations."
+      letter: "ה (Hey - First)",
+      content: "ערבי נחל (willows) have neither taste nor fragrance, representing פושעי ישראל (sinners of Israel) and שוכני עפר (dwellers in dust). Yet they are bound together with the tzaddik's lulav, showing that even they can connect to righteousness and should never despair, for מלא כל הארץ כבודו - divine glory fills even the lowest places.",
+      anatomy: "Corresponds to the lips and speech in human anatomy",
+      seventy: "ערבה is the acronym for ע׳ רבה (Great Seventy), corresponding to the large ע in שמע ישראל. Represents the spreading of divine unity into all seventy languages and nations.",
+      awakening: "The נענועים (shakings) are like waking someone from sleep - when you want to rouse a person, you shake and stir them until they awaken. Your lulav movements perform this cosmic awakening, מנערין ומנענעין כל השוכני עפר שיקוצו משנתם (shaking and stirring all the dwellers in dust so they awaken from their sleep).",
+      unity: "Even the ערבי נחל (willows representing sinners) are bound together with the tzaddik's lulav, showing that they too can connect to righteousness and should never despair.",
+      practice: "When you shake the willows, you're extending the proclamation of divine oneness into every corner of creation, preparing the world for the revelation when all nations will recognize the one Creator.",
+      symbolism: "Represents Jewish souls who have neither Torah nor good deeds, yet are still bound together with all Israel, showing the fundamental unity of the Jewish people."
     },
   };
 
@@ -700,9 +722,128 @@ export default function DaledMinum3DScene() {
             </div>
 
             <div className="panel-body">
+              {speciesInfo[selectedSpecies].letter && (
+                <div className="info-card highlight">
+                  <div className="info-card-title">Divine Letter</div>
+                  <div className="info-card-content" style={{fontSize: '1.5rem', textAlign: 'center', fontWeight: 'bold'}}>
+                    {speciesInfo[selectedSpecies].letter}
+                  </div>
+                </div>
+              )}
+
               <div className="info-card mystical">
                 <div className="info-card-title">Mystical Understanding</div>
                 <div className="info-card-content">{speciesInfo[selectedSpecies].content}</div>
+              </div>
+
+              {speciesInfo[selectedSpecies].gematria && (
+                <div className="info-card highlight">
+                  <div className="info-card-title">Gematria & Life</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].gematria}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].anatomy && (
+                <div className="info-card">
+                  <div className="info-card-title">Human Anatomy Correspondence</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].anatomy}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].perception && (
+                <div className="info-card">
+                  <div className="info-card-title">Spiritual Perception</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].perception}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].precedence && (
+                <div className="info-card highlight">
+                  <div className="info-card-title">Torah Precedence - נעשה ונשמע</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].precedence}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].malchut && (
+                <div className="info-card mystical">
+                  <div className="info-card-title">Malchut - Unifying All Worlds</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].malchut}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].rectification && (
+                <div className="info-card">
+                  <div className="info-card-title">Rectifying Original Sin</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].rectification}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].mechanics && (
+                <div className="info-card">
+                  <div className="info-card-title">Mystical Mechanics - הולכה והבאה</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].mechanics}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].soul && (
+                <div className="info-card mystical">
+                  <div className="info-card-title">The Soul's Perception</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].soul}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].patriarchs && (
+                <div className="info-card">
+                  <div className="info-card-title">Descent of Patriarchal Holiness</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].patriarchs}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].pattern && (
+                <div className="info-card">
+                  <div className="info-card-title">Sacred Pattern - תלת גו תלת</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].pattern}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].seventy && (
+                <div className="info-card highlight">
+                  <div className="info-card-title">The Seventy Nations</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].seventy}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].awakening && (
+                <div className="info-card mystical">
+                  <div className="info-card-title">Cosmic Awakening</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].awakening}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].unity && (
+                <div className="info-card">
+                  <div className="info-card-title">Unity of Israel</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].unity}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].treeOfLife && (
+                <div className="info-card highlight">
+                  <div className="info-card-title">Touching the Tree of Life</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].treeOfLife}</div>
+                </div>
+              )}
+
+              {speciesInfo[selectedSpecies].symbolism && (
+                <div className="info-card">
+                  <div className="info-card-title">Symbolism</div>
+                  <div className="info-card-content">{speciesInfo[selectedSpecies].symbolism}</div>
+                </div>
+              )}
+
+              <div className="info-card">
+                <div className="info-card-title">Practical Application</div>
+                <div className="info-card-content">{speciesInfo[selectedSpecies].practice}</div>
               </div>
             </div>
           </>
