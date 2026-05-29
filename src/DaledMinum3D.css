@@ -7,7 +7,7 @@
 }
 
 .back-button {
-  position: fixed;
+  /* position: fixed; */
   top: 20px;
   left: 20px;
   padding: 12px 25px;
@@ -298,7 +298,11 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.2)
+  );
   border: 3px solid var(--btn-color, white);
   color: white;
   cursor: pointer;
@@ -310,15 +314,21 @@
   transition: all 0.4s ease;
   font-weight: bold;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px var(--btn-color, rgba(255, 255, 255, 0.3));
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 20px var(--btn-color, rgba(255, 255, 255, 0.3));
   transform-style: preserve-3d;
   z-index: 5;
 }
 
 .direction-btn:hover {
   transform: scale(1.15) translateZ(20px);
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), 0 0 40px var(--btn-color, rgba(255, 255, 255, 0.6));
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), var(--btn-color));
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4),
+    0 0 40px var(--btn-color, rgba(255, 255, 255, 0.6));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.2),
+    var(--btn-color)
+  );
 }
 
 .direction-btn.active {

@@ -2,6 +2,7 @@ body {
   font-family: "Times New Roman", serif;
   background-color: #fefefe;
   color: #333;
+  margin: 0px;
 }
 
 .mystical-note-container {
@@ -43,11 +44,13 @@ body {
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
   }
   50% {
-    box-shadow: 0 8px 30px rgba(74, 144, 226, 0.7), 0 0 20px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 8px 30px rgba(74, 144, 226, 0.7),
+      0 0 20px rgba(255, 215, 0, 0.3);
   }
 }
 h1 {
