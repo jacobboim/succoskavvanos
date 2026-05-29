@@ -1491,16 +1491,21 @@ function MainScene({
 }) {
   const [cameraOutside, setCameraOutside] = useState(false);
   const effectiveHideLabels = hideLabels || cameraOutside;
+  const isMobile = useMemo(() => window.innerWidth < 768, []);
 
   return (
     <>
       <CameraTracker onChange={setCameraOutside} />
-      <PerspectiveCamera makeDefault position={[0, 1.5, 13]} fov={58} />
+      <PerspectiveCamera
+        makeDefault
+        position={isMobile ? [0, 2, 22] : [0, 1.5, 13]}
+        fov={isMobile ? 70 : 58}
+      />
       <OrbitControls
         enableDamping
         dampingFactor={0.05}
         minDistance={5}
-        maxDistance={20}
+        maxDistance={isMobile ? 30 : 20}
         maxPolarAngle={Math.PI * 0.84}
         target={[0, 0.5, 0]}
         enablePan={false}
