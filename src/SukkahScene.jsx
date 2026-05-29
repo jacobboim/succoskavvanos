@@ -1253,10 +1253,9 @@ function UshpizinMedallion({ ushpiz, position, onClick, isSelected }) {
         />
       </mesh>
 
-      {/* ─── INVISIBLE COMFORT HITBOX OVERLAY ────────────────────────────────────── */}
-      {/* This sits slightly forward and has a massive radius (0.68) making clicks instantly responsive */}
+      {/* Sphere hitbox — consistent click area from any viewing angle */}
       <mesh
-        position={[0, -0.15, 0.05]}
+        position={[0, -0.1, 0]}
         onClick={(e) => {
           e.stopPropagation();
           onClick();
@@ -1272,10 +1271,9 @@ function UshpizinMedallion({ ushpiz, position, onClick, isSelected }) {
           document.body.style.cursor = "auto";
         }}
       >
-        <circleGeometry args={[0.68, 32]} />
-        <meshBasicMaterial visible={false} />
+        <sphereGeometry args={[0.55, 8, 8]} />
+        <meshBasicMaterial transparent opacity={0} />
       </mesh>
-      {/* ─────────────────────────────────────────────────────────────────────────── */}
 
       {/* Icon in center */}
       <Html position={[0, 0.06, 0.04]} center distanceFactor={14}>
@@ -1352,12 +1350,12 @@ function UshpizinMedallion({ ushpiz, position, onClick, isSelected }) {
 }
 
 function UshpizinWall({ onUshpizinClick, selectedUshpiz }) {
-  const wallX = -4.85;
-
+  // Group sits just outside the left wall (x = -5) and rotates -90° around Y
+  // so its local +z faces outward (world -x), spreading medallions along world z.
   return (
-    <group position={[wallX, 0, 0]} rotation={[0, Math.PI / 2, 0]}>
+    <group position={[-5.15, 0, 0]} rotation={[0, -Math.PI / 2, 0]}>
       {/* "USHPIZIN" Header */}
-      <Html position={[0, 3.4, 0.05]} center distanceFactor={14}>
+      <Html position={[0, 3.2, 0.05]} center distanceFactor={14}>
         <div
           style={{
             color: "#FFD700",
@@ -1376,7 +1374,7 @@ function UshpizinWall({ onUshpizinClick, selectedUshpiz }) {
       </Html>
 
       {/* Accent line border under banner header */}
-      <mesh position={[0, 3.05, 0.02]}>
+      <mesh position={[0, 2.9, 0.02]}>
         <planeGeometry args={[8.4, 0.02]} />
         <meshStandardMaterial
           color="#FFD700"
@@ -1384,15 +1382,15 @@ function UshpizinWall({ onUshpizinClick, selectedUshpiz }) {
           emissiveIntensity={0.4}
           transparent
           opacity={0.6}
+          side={THREE.DoubleSide}
         />
       </mesh>
 
-      {/* 7 Medallions with increased spacing offset (multiplied by 1.2 instead of 0.9) */}
+      {/* 7 Medallions on the outside face of the left wall, spread front-to-back */}
       {USHPIZIN.map((u, i) => (
         <UshpizinMedallion
           key={u.key}
           ushpiz={u}
-          // Changed center shift to -3.6 and step width to 1.2 to give plenty of space across the wall panel
           position={[-3.6 + i * 1.2, 1.8, 0.05]}
           onClick={() => onUshpizinClick(u.key)}
           isSelected={selectedUshpiz === u.key}
@@ -1423,6 +1421,23 @@ function CandleLight() {
       castShadow
     />
   );
+}
+
+// Hides direction labels when the camera is outside the sukkah walls.
+// The front (z > 5) is open, so labels stay visible there.
+function CameraTracker({ onChange }) {
+  const prevRef = useRef(false);
+  useFrame(({ camera }) => {
+    const outside =
+      camera.position.x < -5.2 ||
+      camera.position.x > 5.2 ||
+      camera.position.z < -5.2;
+    if (outside !== prevRef.current) {
+      prevRef.current = outside;
+      onChange(outside);
+    }
+  });
+  return null;
 }
 
 // ─── MAIN 3D SCENE ────────────────────────────────────────────────────────────
@@ -1474,8 +1489,12 @@ function MainScene({
   selectedUshpiz,
   hideLabels,
 }) {
+  const [cameraOutside, setCameraOutside] = useState(false);
+  const effectiveHideLabels = hideLabels || cameraOutside;
+
   return (
     <>
+      <CameraTracker onChange={setCameraOutside} />
       <PerspectiveCamera makeDefault position={[0, 1.5, 13]} fov={58} />
       <OrbitControls
         enableDamping
@@ -1558,7 +1577,7 @@ function MainScene({
             hebrew={d.hebrew}
             onClick={() => onDirectionClick(d.key)}
             isSelected={selectedDirection === d.key}
-            hideLabels={hideLabels}
+            hideLabels={effectiveHideLabels}
           />
           <EnergyBeam
             from={[0, 1, 0]}
@@ -1969,8 +1988,8 @@ export default function SukkahScenePage() {
           ✦ Click the <strong>6 glowing diamonds</strong> for each direction's
           kavana &nbsp;·&nbsp; 🌿 Click the{" "}
           <strong>Chassid's Daled Minim</strong> to explore each species
-          &nbsp;·&nbsp; ✨ Click the <strong>7 circles on the back wall</strong>{" "}
-          for the Ushpizin guests
+          &nbsp;·&nbsp; ✨ Orbit left to click the <strong>7 Ushpizin medallions</strong>{" "}
+          on the outer left wall
         </p>
       </div>
 
