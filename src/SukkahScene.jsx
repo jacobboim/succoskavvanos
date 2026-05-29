@@ -638,13 +638,13 @@ function ChassidFigure({ onSpeciesClick }) {
           label="Lulav 🌿"
         />
         <ClickableIndicator
-          position={[-0.95, 1.7, 0.15]}
+          position={[-0.25, 1.9, 0.15]}
           color="#4caf50"
           onClick={() => onSpeciesClick("hadassim")}
           label="Hadassim 🍃"
         />
         <ClickableIndicator
-          position={[-0.25, 1.9, 0.15]}
+          position={[-0.95, 1.7, 0.15]}
           color="#81c784"
           onClick={() => onSpeciesClick("aravot")}
           label="Aravot 🌾"
