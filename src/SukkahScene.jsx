@@ -724,12 +724,14 @@ function DirectionMarker({
         {!hideLabels && (
           <Html distanceFactor={10}>
             <div
+              onClick={onClick}
               style={{
                 color: "white",
                 fontSize: "14px",
                 fontWeight: "bold",
                 textAlign: "center",
-                pointerEvents: "none",
+                cursor: "pointer",
+                padding: "4px 8px",
                 textShadow: "0 0 10px rgba(0,0,0,0.8)",
                 whiteSpace: "nowrap",
               }}
