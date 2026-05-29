@@ -1371,7 +1371,7 @@ function UshpizinWall({ onUshpizinClick, selectedUshpiz }) {
             whiteSpace: "nowrap",
           }}
         >
-          ✦ THE HOLY GUESTS ✦
+          ✦ אושפיזין ✦
         </div>
       </Html>
 
