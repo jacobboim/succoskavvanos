@@ -2222,6 +2222,14 @@ export default function SukkahScenePage() {
 
   const anyOpen = selectedDirection || selectedSpecies || selectedUshpiz || selectedSukkah;
 
+  const closeAll = () => {
+    setSelectedDirection(null);
+    setSelectedSpecies(null);
+    setSelectedUshpiz(null);
+    setSelectedSukkah(false);
+  };
+
+
   const dirData = selectedDirection ? DIRECTIONS_INFO[selectedDirection] : null;
   const specData = selectedSpecies ? SPECIES_INFO[selectedSpecies] : null;
   const ushpizData = selectedUshpiz
@@ -2281,15 +2289,40 @@ export default function SukkahScenePage() {
         </p>
       </div>
 
+      {/* Global close button — lives outside all panels so backdrop-filter
+          on the panel can't break position:fixed */}
+      {anyOpen && (
+        <button
+          onClick={closeAll}
+          style={{
+            position: "fixed",
+            top: 20,
+            right: 20,
+            width: 44,
+            height: 44,
+            borderRadius: "50%",
+            background: "rgba(255,255,255,0.12)",
+            border: "2px solid rgba(255,255,255,0.35)",
+            color: "white",
+            fontSize: "1.4rem",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 2010,
+            transition: "background 0.2s, transform 0.2s",
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.25)"; e.currentTarget.style.transform = "rotate(90deg)"; }}
+          onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.12)"; e.currentTarget.style.transform = "rotate(0deg)"; }}
+        >
+          ✕
+        </button>
+      )}
+
       {/* Shared overlay */}
       <div
         className={`panel-overlay ${anyOpen ? "active" : ""}`}
-        onClick={() => {
-          setSelectedDirection(null);
-          setSelectedSpecies(null);
-          setSelectedUshpiz(null);
-          setSelectedSukkah(false);
-        }}
+        onClick={closeAll}
       />
 
       {/* Direction panel */}

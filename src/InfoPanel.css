@@ -40,30 +40,21 @@
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* Panel Header */
-.panel-close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+/* Drag handle — visible hint that the panel can be swiped down */
+.info-slide-panel.open::before {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  margin: 12px auto 0;
+  flex-shrink: 0;
 }
 
-.panel-close-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: rotate(90deg);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+/* In-panel close buttons are hidden — the global fixed button handles closing */
+.panel-close-btn {
+  display: none;
 }
 
 .panel-header-content {
