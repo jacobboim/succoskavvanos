@@ -465,6 +465,62 @@ const USHPIZIN = [
   },
 ];
 
+const SUKKAH_INFO = {
+  icon: "🏕️",
+  title: "The Sacred Sukkah",
+  hebrew: "הסוכה הקדושה",
+  subtitle: "צלא דמהמנותא — Shadow of Faith",
+  color: "#FFD700",
+  colorDark: "#B8860B",
+  teachings: [
+    {
+      title: "Shadow of Faith — צלא דמהמנותא",
+      content:
+        "The Zohar calls the sukkah צלא דמהמנותא — the shadow of faith. Just as your physical shadow reflects every movement you make, everything you do in the lower world awakens corresponding reactions above. Your sukkah mirrors a סוכה עליונה (supernal sukkah) at the highest spiritual level, with no barrier between it and the אור אין סוף (Infinite Light). When you perform the lulav movements within this shadow of faith, you create perfect correspondence between your physical actions and their supernal archetypes.",
+    },
+    {
+      title: "The Walls Form the Letter ה",
+      content:
+        "The required structure — two complete walls plus a third wall of even one handbreadth — forms the shape of the letter ה (Hey), representing the final ה of יהוה, which is מלכות. When you dwell in the sukkah, you are literally sitting inside the letter ה, inside Divine Kingship itself. The sukkah embodies complete קבלת עול — acceptance of Hashem's sovereignty in every detail.",
+    },
+    {
+      title: "The Clouds of Glory",
+      content:
+        "The sukkah recalls the ענני הכבוד (Clouds of Glory) that surrounded and protected Israel during 40 years in the desert, shielding from sun, rain, and enemies — Hashem's miraculous embrace manifested as shelter. Just as the Clouds traveled from place to place yet were 'in their place' because they followed divine will, so too one who accepts the yoke of Heaven remains spiritually 'in place' regardless of circumstances.",
+    },
+    {
+      title: "Leaving Permanence — The Deepest Lesson",
+      content:
+        "Halacha says to dwell in the sukkah כדרך שאתה דר — exactly as you normally dwell. Sleep there, eat all meals there, bring your finest vessels. This total immersion strips away the illusion that physical walls provide true security. The sukkah's temporary nature is not a compromise — it IS the message. What is your real home? The connection to Hashem that no circumstance can sever.",
+    },
+    {
+      title: "The Fallen Sukkah of David",
+      content:
+        "Amos declares: 'On that day I will raise up the fallen sukkah of David' (9:11). Every sukkah we build is an act of yearning — rebuilding the fallen structure of divine kingship from exile toward its ultimate restoration. Hoshana Rabbah, the seventh day, is the final sealing of judgment, when all seven sefirot complete their cosmic cycle through Malchut/Dovid.",
+    },
+    {
+      title: "Divine Mathematics — סוכה = 240",
+      content:
+        "The word סוכה in full letters equals exactly 240 — the precise difference between שמע ישראל ה׳ אלקינו ה׳ אחד (1,118) and ברוך שם כבוד מלכותו לעולם ועד (1,358). Since the Torah mentions sukkah three times, 3 × 240 = 720. Through the three-fold power of the sukkah, your three daily Shema recitations are elevated into ברוך שם — uniting יחודא עילאה (higher unification) with יחודא תתאה (lower unification).",
+    },
+    {
+      title: "Yaakov — The Origin of Sukkot",
+      content:
+        "'Yaakov traveled to Sukkot and built a house AND made sukkot for his cattle — therefore the place is called Sukkot' (Bereishit 33:17). Yaakov himself founded this mitzva. As ish tam — a man of wholeness — he embodies Tiferet: the harmony between chesed and gevurah, heaven and earth, exactly what the sukkah shows with its open schach above and firm earth below.",
+    },
+    {
+      title: "The Schach — Open to Heaven",
+      content:
+        "The schach must come from what grew in the ground, must be cut, and must provide shade while allowing you to see the stars. This paradox — shade yet openness — is the sukkah's greatest teaching. True shelter is not walls that block out heaven, but the canopy of Hashem's presence that shades without separating. The stars visible through the schach remind us: our roof is Hashem Himself.",
+    },
+    {
+      title: "Protection from the Evil Eye",
+      content:
+        "The sukkah creates protection from עין הרע, just as the Clouds of Glory shielded Israel from Bilam's curse. The three Torah mentions of 'sukkah' equal the gematria of רגע (moment) — the brief moment of divine intensity the evil eye tries to exploit. Dwelling in the sukkah transforms this moment of potential vulnerability into one of complete divine embrace and spiritual empowerment.",
+    },
+  ],
+};
+
 // ─── 3D COMPONENTS ─────────────────────────────────────────────────────────────
 
 // Exact copy of ClickableIndicator from DaledMinum3DScene
@@ -1214,7 +1270,7 @@ function SukkahShell() {
     </group>
   );
 }
-function UshpizinMedallion({ ushpiz, position, onClick, isSelected }) {
+function UshpizinMedallion({ ushpiz, position, onClick, isSelected, hideLabels }) {
   const [hovered, setHovered] = useState(false);
   const discRef = useRef();
 
@@ -1275,60 +1331,64 @@ function UshpizinMedallion({ ushpiz, position, onClick, isSelected }) {
         <meshBasicMaterial transparent opacity={0} />
       </mesh>
 
-      {/* Icon in center */}
-      <Html position={[0, 0.06, 0.04]} center distanceFactor={14}>
-        <div style={{ fontSize: "22px", pointerEvents: "none", lineHeight: 1 }}>
-          {ushpiz.icon}
-        </div>
-      </Html>
+      {!hideLabels && (
+        <>
+          {/* Icon in center */}
+          <Html position={[0, 0.06, 0.04]} center distanceFactor={14}>
+            <div style={{ fontSize: "22px", pointerEvents: "none", lineHeight: 1 }}>
+              {ushpiz.icon}
+            </div>
+          </Html>
 
-      {/* Day number */}
-      <Html position={[0, -0.16, 0.04]} center distanceFactor={14}>
-        <div
-          style={{
-            color: "white",
-            fontSize: "11px",
-            fontWeight: "bold",
-            pointerEvents: "none",
-            textShadow: "0 1px 4px rgba(0,0,0,0.9)",
-            lineHeight: 1,
-          }}
-        >
-          {ushpiz.day}
-        </div>
-      </Html>
+          {/* Day number */}
+          <Html position={[0, -0.16, 0.04]} center distanceFactor={14}>
+            <div
+              style={{
+                color: "white",
+                fontSize: "11px",
+                fontWeight: "bold",
+                pointerEvents: "none",
+                textShadow: "0 1px 4px rgba(0,0,0,0.9)",
+                lineHeight: 1,
+              }}
+            >
+              {ushpiz.day}
+            </div>
+          </Html>
 
-      {/* Name below circle */}
-      <Html position={[0, -0.65, 0.04]} center distanceFactor={14}>
-        <div
-          style={{
-            textAlign: "center",
-            pointerEvents: "none",
-            lineHeight: 1.3,
-          }}
-        >
-          <div
-            style={{
-              color: "white",
-              fontSize: "10px",
-              fontWeight: "bold",
-              textShadow: "0 1px 5px rgba(0,0,0,1)",
-              whiteSpace: "nowrap",
-            }}
-          >
-            {ushpiz.hebrew}
-          </div>
-          <div
-            style={{
-              color: ushpiz.color,
-              fontSize: "9px",
-              textShadow: "0 0 6px rgba(0,0,0,0.9)",
-            }}
-          >
-            {ushpiz.sefirah}
-          </div>
-        </div>
-      </Html>
+          {/* Name below circle */}
+          <Html position={[0, -0.65, 0.04]} center distanceFactor={14}>
+            <div
+              style={{
+                textAlign: "center",
+                pointerEvents: "none",
+                lineHeight: 1.3,
+              }}
+            >
+              <div
+                style={{
+                  color: "white",
+                  fontSize: "10px",
+                  fontWeight: "bold",
+                  textShadow: "0 1px 5px rgba(0,0,0,1)",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {ushpiz.hebrew}
+              </div>
+              <div
+                style={{
+                  color: ushpiz.color,
+                  fontSize: "9px",
+                  textShadow: "0 0 6px rgba(0,0,0,0.9)",
+                }}
+              >
+                {ushpiz.sefirah}
+              </div>
+            </div>
+          </Html>
+        </>
+      )}
 
       {(hovered || isSelected) && (
         <Sparkles
@@ -1349,7 +1409,7 @@ function UshpizinMedallion({ ushpiz, position, onClick, isSelected }) {
   );
 }
 
-function UshpizinWall({ onUshpizinClick, selectedUshpiz }) {
+function UshpizinWall({ onUshpizinClick, selectedUshpiz, hideLabels }) {
   // Group sits just outside the left wall (x = -5) and rotates -90° around Y
   // so its local +z faces outward (world -x), spreading medallions along world z.
   return (
@@ -1394,8 +1454,91 @@ function UshpizinWall({ onUshpizinClick, selectedUshpiz }) {
           position={[-3.6 + i * 1.2, 1.8, 0.05]}
           onClick={() => onUshpizinClick(u.key)}
           isSelected={selectedUshpiz === u.key}
+          hideLabels={hideLabels}
         />
       ))}
+    </group>
+  );
+}
+
+// ─── SUKKAH INFO BUTTON ───────────────────────────────────────────────────────
+
+function SukkahInfoButton({ onClick, isSelected, hideLabel }) {
+  const [hovered, setHovered] = useState(false);
+  const discRef = useRef();
+
+  useFrame(({ clock }) => {
+    if (discRef.current) {
+      discRef.current.material.emissiveIntensity =
+        0.4 + Math.sin(clock.elapsedTime * 1.1) * 0.2;
+    }
+  });
+
+  return (
+    <group position={[5.15, 1.5, 0]} rotation={[0, Math.PI / 2, 0]}>
+      {/* Outer glow ring */}
+      <mesh>
+        <ringGeometry args={[0.4, 0.5, 40]} />
+        <meshStandardMaterial
+          color="#FFD700"
+          emissive="#FFD700"
+          emissiveIntensity={hovered || isSelected ? 1.2 : 0.6}
+          side={THREE.DoubleSide}
+          transparent
+          opacity={0.9}
+        />
+      </mesh>
+
+      {/* Filled disc */}
+      <mesh ref={discRef} position={[0, 0, 0.02]}>
+        <circleGeometry args={[0.39, 40]} />
+        <meshStandardMaterial
+          color="#1e3a10"
+          emissive="#FFD700"
+          emissiveIntensity={0.4}
+          side={THREE.DoubleSide}
+          transparent
+          opacity={0.9}
+        />
+      </mesh>
+
+      {/* Html labels — only when camera is on the right side and no panel open */}
+      {!hideLabel && (
+        <>
+          <Html position={[0, 0.06, 0.04]} center distanceFactor={14}>
+            <div style={{ fontSize: "20px", pointerEvents: "none", lineHeight: 1 }}>
+              🏕️
+            </div>
+          </Html>
+          <Html position={[0, -0.65, 0.04]} center distanceFactor={14}>
+            <div style={{ textAlign: "center", pointerEvents: "none", lineHeight: 1.3 }}>
+              <div style={{ color: "white", fontSize: "10px", fontWeight: "bold", textShadow: "0 1px 5px rgba(0,0,0,1)", whiteSpace: "nowrap" }}>
+                הסוכה
+              </div>
+              <div style={{ color: "#FFD700", fontSize: "9px", textShadow: "0 0 6px rgba(0,0,0,0.9)" }}>
+                The Sukkah
+              </div>
+            </div>
+          </Html>
+        </>
+      )}
+
+      {/* Sphere hitbox — always present for clicking */}
+      <mesh
+        position={[0, -0.1, 0]}
+        onClick={(e) => { e.stopPropagation(); onClick(); }}
+        onPointerOver={(e) => { e.stopPropagation(); setHovered(true); document.body.style.cursor = "pointer"; }}
+        onPointerOut={(e) => { e.stopPropagation(); setHovered(false); document.body.style.cursor = "auto"; }}
+      >
+        <sphereGeometry args={[0.55, 8, 8]} />
+        <meshBasicMaterial transparent opacity={0} />
+      </mesh>
+
+      {(hovered || isSelected) && (
+        <Sparkles count={12} scale={1.2} size={1.8} speed={0.5} color="#FFD700" />
+      )}
+
+      <pointLight color="#FFD700" intensity={hovered || isSelected ? 0.6 : 0.2} distance={2.5} />
     </group>
   );
 }
@@ -1423,19 +1566,99 @@ function CandleLight() {
   );
 }
 
-// Hides direction labels when the camera is outside the sukkah walls.
-// The front (z > 5) is open, so labels stay visible there.
-function CameraTracker({ onChange }) {
-  const prevRef = useRef(false);
+function Moon() {
+  const outerHaloRef = useRef();
+
+  useFrame(({ clock }) => {
+    if (outerHaloRef.current) {
+      outerHaloRef.current.material.opacity =
+        0.06 + Math.sin(clock.elapsedTime * 0.35) * 0.012;
+    }
+  });
+
+  return (
+    <group position={[18, 22, -55]}>
+      {/* Moon surface — warm cream with emissive glow */}
+      <mesh>
+        <sphereGeometry args={[5, 64, 64]} />
+        <meshStandardMaterial
+          color="#F5F0D8"
+          emissive="#EDE8C0"
+          emissiveIntensity={0.65}
+          roughness={1}
+          metalness={0}
+        />
+      </mesh>
+
+      {/* Subtle darker "mare" cap to hint at craters */}
+      <mesh position={[1.2, 1.5, 4.5]}>
+        <sphereGeometry args={[1.8, 32, 32]} />
+        <meshStandardMaterial
+          color="#D8D2B0"
+          emissive="#C8C4A0"
+          emissiveIntensity={0.3}
+          roughness={1}
+          transparent
+          opacity={0.55}
+        />
+      </mesh>
+      <mesh position={[-2.0, -0.8, 4.6]}>
+        <sphereGeometry args={[1.1, 32, 32]} />
+        <meshStandardMaterial
+          color="#CCCAA8"
+          emissive="#C0BC98"
+          emissiveIntensity={0.25}
+          roughness={1}
+          transparent
+          opacity={0.45}
+        />
+      </mesh>
+
+      {/* Inner warm glow halo */}
+      <mesh>
+        <sphereGeometry args={[6.2, 32, 32]} />
+        <meshBasicMaterial
+          color="#FFFCE0"
+          transparent
+          opacity={0.09}
+          side={THREE.BackSide}
+          depthWrite={false}
+        />
+      </mesh>
+
+      {/* Outer blue atmospheric halo — gently pulses */}
+      <mesh ref={outerHaloRef}>
+        <sphereGeometry args={[10, 32, 32]} />
+        <meshBasicMaterial
+          color="#A8C8FF"
+          transparent
+          opacity={0.06}
+          side={THREE.BackSide}
+          depthWrite={false}
+        />
+      </mesh>
+
+      {/* Moonlight cast onto the sukkah */}
+      <pointLight color="#C8DCFF" intensity={1.4} distance={600} />
+    </group>
+  );
+}
+
+// Tracks camera position and fires callbacks only when values change.
+function CameraTracker({ onOutsideChange, onLeftChange, onRightChange }) {
+  const prevOutside = useRef(false);
+  const prevLeft = useRef(false);
+  const prevRight = useRef(false);
   useFrame(({ camera }) => {
     const outside =
       camera.position.x < -5.2 ||
       camera.position.x > 5.2 ||
       camera.position.z < -5.2;
-    if (outside !== prevRef.current) {
-      prevRef.current = outside;
-      onChange(outside);
-    }
+    const onLeft = camera.position.x < -4;
+    const onRight = camera.position.x > 4;
+    if (outside !== prevOutside.current) { prevOutside.current = outside; onOutsideChange(outside); }
+    if (onLeft !== prevLeft.current)     { prevLeft.current = onLeft;     onLeftChange(onLeft); }
+    if (onRight !== prevRight.current)   { prevRight.current = onRight;   onRightChange(onRight); }
   });
   return null;
 }
@@ -1485,21 +1708,33 @@ function MainScene({
   onDirectionClick,
   onSpeciesClick,
   onUshpizinClick,
+  onSukkahClick,
   selectedDirection,
   selectedUshpiz,
+  selectedSukkah,
   hideLabels,
 }) {
   const [cameraOutside, setCameraOutside] = useState(false);
+  const [cameraOnLeft, setCameraOnLeft] = useState(false);
+  const [cameraOnRight, setCameraOnRight] = useState(false);
   const effectiveHideLabels = hideLabels || cameraOutside;
+  // Only show ushpizin Html when camera is actually on the left side AND no panel open
+  const hideUshpizinLabels = !cameraOnLeft || hideLabels;
+  // Only show sukkah button Html when camera is on the right side AND no panel open
+  const hideSukkahLabel = !cameraOnRight || hideLabels;
   const isMobile = useMemo(() => window.innerWidth < 768, []);
 
   return (
     <>
-      <CameraTracker onChange={setCameraOutside} />
+      <CameraTracker
+        onOutsideChange={setCameraOutside}
+        onLeftChange={setCameraOnLeft}
+        onRightChange={setCameraOnRight}
+      />
       <PerspectiveCamera
         makeDefault
-        position={isMobile ? [0, 2, 22] : [0, 1.5, 13]}
-        fov={isMobile ? 70 : 58}
+        position={isMobile ? [0, 4, 26] : [0, 4, 19]}
+        fov={isMobile ? 70 : 62}
       />
       <OrbitControls
         enableDamping
@@ -1514,12 +1749,13 @@ function MainScene({
       <Stars
         radius={130}
         depth={60}
-        count={7000}
-        factor={4}
-        saturation={0}
+        count={10000}
+        factor={5}
+        saturation={0.4}
         fade
-        speed={0.7}
+        speed={0.4}
       />
+      <Moon />
 
       {/* ─── FIXED LIGHTING SETUP ────────────────────────────────────────── */}
       {/* Boosted ambient light with a warm cream tint so your wood tones can actually show through */}
@@ -1563,10 +1799,18 @@ function MainScene({
       {/* Sukkah shell */}
       <SukkahShell />
 
-      {/* Ushpizin on back wall */}
+      {/* Ushpizin on left outer wall */}
       <UshpizinWall
         onUshpizinClick={onUshpizinClick}
         selectedUshpiz={selectedUshpiz}
+        hideLabels={hideUshpizinLabels}
+      />
+
+      {/* Sukkah info button on right outer wall */}
+      <SukkahInfoButton
+        onClick={onSukkahClick}
+        isSelected={selectedSukkah}
+        hideLabel={hideSukkahLabel}
       />
 
       {/* Chassid with daled minim */}
@@ -1931,14 +2175,45 @@ function UshpizinPanel({ data, onClose }) {
   );
 }
 
+function SukkahPanel({ onClose }) {
+  const data = SUKKAH_INFO;
+  return (
+    <>
+      <button className="panel-close-btn" onClick={onClose}>
+        ✕
+      </button>
+      <div className="panel-header-content">
+        <div className="panel-direction-icon">{data.icon}</div>
+        <h2 className="panel-title">{data.title}</h2>
+        <p className="panel-subtitle">{data.hebrew}</p>
+        <p className="panel-subtitle" style={{ marginTop: "4px", fontSize: "0.95rem" }}>
+          {data.subtitle}
+        </p>
+      </div>
+      <div className="panel-body">
+        {data.teachings.map((t, i) => (
+          <div
+            key={i}
+            className={`info-card ${i === 0 || i === 3 || i === 7 ? "highlight" : i === 5 ? "mystical" : ""}`}
+          >
+            <div className="info-card-title">{t.title}</div>
+            <div className="info-card-content">{t.content}</div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
 
 export default function SukkahScenePage() {
   const [selectedDirection, setSelectedDirection] = useState(null);
   const [selectedSpecies, setSelectedSpecies] = useState(null);
   const [selectedUshpiz, setSelectedUshpiz] = useState(null);
+  const [selectedSukkah, setSelectedSukkah] = useState(false);
 
-  const anyOpen = selectedDirection || selectedSpecies || selectedUshpiz;
+  const anyOpen = selectedDirection || selectedSpecies || selectedUshpiz || selectedSukkah;
 
   const dirData = selectedDirection ? DIRECTIONS_INFO[selectedDirection] : null;
   const specData = selectedSpecies ? SPECIES_INFO[selectedSpecies] : null;
@@ -1980,8 +2255,10 @@ export default function SukkahScenePage() {
               onDirectionClick={setSelectedDirection}
               onSpeciesClick={setSelectedSpecies}
               onUshpizinClick={setSelectedUshpiz}
+              onSukkahClick={() => setSelectedSukkah((v) => !v)}
               selectedDirection={selectedDirection}
               selectedUshpiz={selectedUshpiz}
+              selectedSukkah={selectedSukkah}
               hideLabels={!!anyOpen}
             />
           </Suspense>
@@ -1993,8 +2270,7 @@ export default function SukkahScenePage() {
           ✦ Click the <strong>6 glowing diamonds</strong> for each direction's
           kavana &nbsp;·&nbsp; 🌿 Click the{" "}
           <strong>Chassid's Daled Minim</strong> to explore each species
-          &nbsp;·&nbsp; ✨ Orbit left to click the <strong>7 Ushpizin medallions</strong>{" "}
-          on the outer left wall
+          &nbsp;·&nbsp; ✨ Orbit left for the <strong>7 Ushpizin</strong> · Orbit right for the <strong>Sukkah</strong>
         </p>
       </div>
 
@@ -2005,6 +2281,7 @@ export default function SukkahScenePage() {
           setSelectedDirection(null);
           setSelectedSpecies(null);
           setSelectedUshpiz(null);
+          setSelectedSukkah(false);
         }}
       />
 
@@ -2041,6 +2318,20 @@ export default function SukkahScenePage() {
             data={specData}
             onClose={() => setSelectedSpecies(null)}
           />
+        )}
+      </div>
+
+      {/* Sukkah info panel */}
+      <div
+        className={`info-slide-panel ${selectedSukkah ? "open" : ""}`}
+        style={{
+          "--panel-color": "#FFD700",
+          "--panel-color-dark": "#B8860B",
+          "--panel-color-glow": "#FFD70080",
+        }}
+      >
+        {selectedSukkah && (
+          <SukkahPanel onClose={() => setSelectedSukkah(false)} />
         )}
       </div>
 
