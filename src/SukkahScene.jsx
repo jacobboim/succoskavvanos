@@ -1164,7 +1164,7 @@ function SukkahShell() {
       />
 
       {/* Modern Clean Banners on Back Wall (No Hebrew) */}
-      {/* <SukkahPoster
+      <SukkahPoster
         position={[-2.2, 1.4, -4.85]}
         rotation={[0, 0, 0]}
         title="Welcome"
@@ -1175,7 +1175,7 @@ function SukkahShell() {
         rotation={[0, 0, 0]}
         title="Unity"
         subtitle="Sitting Together as One"
-      /> */}
+      />
 
       {/* Hanging Fruit Ornaments and String Lights */}
       <HangingDecorations />
