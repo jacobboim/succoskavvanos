@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import DaledMinum3DScene from "./DaledMinum3DScene";
+import SukkahScenePage from "./SukkahScene";
 
 const LulavChart = () => {
   const [selectedDay, setSelectedDay] = useState("");
@@ -20,6 +21,13 @@ const LulavChart = () => {
           style={{ background: "linear-gradient(135deg, #7cb342, #558b2f)" }}
         >
           Enter 3D Interactive Experience
+        </Link>
+        <Link
+          to="/sukkah-scene"
+          className="experience-link"
+          style={{ background: "linear-gradient(135deg, #c87941, #7a3e10)" }}
+        >
+          3D Interactive Second Experience
         </Link>
       </div>
 
@@ -1253,6 +1261,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LulavChart />} />
         <Route path="/3d-scene" element={<DaledMinum3DScene />} />
+        <Route path="/sukkah-scene" element={<SukkahScenePage />} />
       </Routes>
     </Router>
   );
