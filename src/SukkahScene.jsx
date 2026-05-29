@@ -7,6 +7,7 @@ import {
   Float,
   Sparkles,
   Html,
+  Billboard,
 } from "@react-three/drei";
 import { Link } from "react-router-dom";
 import * as THREE from "three";
@@ -1281,52 +1282,45 @@ function UshpizinMedallion({ ushpiz, position, onClick, isSelected, hideLabels }
     }
   });
 
+  const pointerHandlers = {
+    onClick:      (e) => { e.stopPropagation(); onClick(); },
+    onPointerOver:(e) => { e.stopPropagation(); setHovered(true);  document.body.style.cursor = "pointer"; },
+    onPointerOut: (e) => { e.stopPropagation(); setHovered(false); document.body.style.cursor = "auto"; },
+  };
+
   return (
     <group position={position}>
-      {/* Outer glow ring */}
-      <mesh>
-        <ringGeometry args={[0.4, 0.5, 40]} />
-        <meshStandardMaterial
-          color={ushpiz.color}
-          emissive={ushpiz.color}
-          emissiveIntensity={hovered || isSelected ? 1.2 : 0.6}
-          side={THREE.DoubleSide}
-          transparent
-          opacity={0.9}
-        />
-      </mesh>
+      {/* Billboard keeps the disc facing the camera at every orbit angle */}
+      <Billboard>
+        {/* Outer glow ring */}
+        <mesh {...pointerHandlers}>
+          <ringGeometry args={[0.4, 0.5, 40]} />
+          <meshStandardMaterial
+            color={ushpiz.color}
+            emissive={ushpiz.color}
+            emissiveIntensity={hovered || isSelected ? 1.2 : 0.6}
+            side={THREE.DoubleSide}
+            transparent
+            opacity={0.9}
+          />
+        </mesh>
 
-      {/* Filled disc */}
-      <mesh ref={discRef} position={[0, 0, 0.02]}>
-        <circleGeometry args={[0.39, 40]} />
-        <meshStandardMaterial
-          color={ushpiz.colorDark}
-          emissive={ushpiz.color}
-          emissiveIntensity={0.35}
-          side={THREE.DoubleSide}
-          transparent
-          opacity={0.88}
-        />
-      </mesh>
+        {/* Filled disc */}
+        <mesh ref={discRef} position={[0, 0, 0.02]} {...pointerHandlers}>
+          <circleGeometry args={[0.39, 40]} />
+          <meshStandardMaterial
+            color={ushpiz.colorDark}
+            emissive={ushpiz.color}
+            emissiveIntensity={0.35}
+            side={THREE.DoubleSide}
+            transparent
+            opacity={0.88}
+          />
+        </mesh>
+      </Billboard>
 
-      {/* Sphere hitbox — consistent click area from any viewing angle */}
-      <mesh
-        position={[0, -0.1, 0]}
-        onClick={(e) => {
-          e.stopPropagation();
-          onClick();
-        }}
-        onPointerOver={(e) => {
-          e.stopPropagation();
-          setHovered(true);
-          document.body.style.cursor = "pointer";
-        }}
-        onPointerOut={(e) => {
-          e.stopPropagation();
-          setHovered(false);
-          document.body.style.cursor = "auto";
-        }}
-      >
+      {/* Sphere hitbox — outside Billboard so it stays in world space */}
+      <mesh position={[0, -0.1, 0]} {...pointerHandlers}>
         <sphereGeometry args={[0.55, 8, 8]} />
         <meshBasicMaterial transparent opacity={0} />
       </mesh>
@@ -1356,13 +1350,15 @@ function UshpizinMedallion({ ushpiz, position, onClick, isSelected, hideLabels }
             </div>
           </Html>
 
-          {/* Name below circle */}
+          {/* Name below circle — clickable */}
           <Html position={[0, -0.65, 0.04]} center distanceFactor={14}>
             <div
+              onClick={onClick}
               style={{
                 textAlign: "center",
-                pointerEvents: "none",
                 lineHeight: 1.3,
+                cursor: "pointer",
+                padding: "4px 6px",
               }}
             >
               <div
@@ -1414,24 +1410,26 @@ function UshpizinWall({ onUshpizinClick, selectedUshpiz, hideLabels }) {
   // so its local +z faces outward (world -x), spreading medallions along world z.
   return (
     <group position={[-5.15, 0, 0]} rotation={[0, -Math.PI / 2, 0]}>
-      {/* "USHPIZIN" Header */}
-      <Html position={[0, 3.2, 0.05]} center distanceFactor={14}>
-        <div
-          style={{
-            color: "#FFD700",
-            fontSize: "16px",
-            fontWeight: "bold",
-            letterSpacing: "4px",
-            textAlign: "center",
-            pointerEvents: "none",
-            textShadow: "0 0 10px rgba(255,200,0,0.7)",
-            fontFamily: "serif",
-            whiteSpace: "nowrap",
-          }}
-        >
-          ✦ אושפיזין ✦
-        </div>
-      </Html>
+      {/* "USHPIZIN" Header — hidden when camera isn't on left side or a panel is open */}
+      {!hideLabels && (
+        <Html position={[0, 3.2, 0.05]} center distanceFactor={14}>
+          <div
+            style={{
+              color: "#FFD700",
+              fontSize: "16px",
+              fontWeight: "bold",
+              letterSpacing: "4px",
+              textAlign: "center",
+              pointerEvents: "none",
+              textShadow: "0 0 10px rgba(255,200,0,0.7)",
+              fontFamily: "serif",
+              whiteSpace: "nowrap",
+            }}
+          >
+            ✦ אושפיזין ✦
+          </div>
+        </Html>
+      )}
 
       {/* Accent line border under banner header */}
       <mesh position={[0, 2.9, 0.02]}>
@@ -1474,33 +1472,42 @@ function SukkahInfoButton({ onClick, isSelected, hideLabel }) {
     }
   });
 
+  const pointerHandlers = {
+    onClick:       (e) => { e.stopPropagation(); onClick(); },
+    onPointerOver: (e) => { e.stopPropagation(); setHovered(true);  document.body.style.cursor = "pointer"; },
+    onPointerOut:  (e) => { e.stopPropagation(); setHovered(false); document.body.style.cursor = "auto"; },
+  };
+
   return (
     <group position={[5.15, 1.5, 0]} rotation={[0, Math.PI / 2, 0]}>
-      {/* Outer glow ring */}
-      <mesh>
-        <ringGeometry args={[0.4, 0.5, 40]} />
-        <meshStandardMaterial
-          color="#FFD700"
-          emissive="#FFD700"
-          emissiveIntensity={hovered || isSelected ? 1.2 : 0.6}
-          side={THREE.DoubleSide}
-          transparent
-          opacity={0.9}
-        />
-      </mesh>
+      {/* Billboard keeps the disc facing the camera at every angle */}
+      <Billboard>
+        {/* Outer glow ring */}
+        <mesh {...pointerHandlers}>
+          <ringGeometry args={[0.4, 0.5, 40]} />
+          <meshStandardMaterial
+            color="#FFD700"
+            emissive="#FFD700"
+            emissiveIntensity={hovered || isSelected ? 1.2 : 0.6}
+            side={THREE.DoubleSide}
+            transparent
+            opacity={0.9}
+          />
+        </mesh>
 
-      {/* Filled disc */}
-      <mesh ref={discRef} position={[0, 0, 0.02]}>
-        <circleGeometry args={[0.39, 40]} />
-        <meshStandardMaterial
-          color="#1e3a10"
-          emissive="#FFD700"
-          emissiveIntensity={0.4}
-          side={THREE.DoubleSide}
-          transparent
-          opacity={0.9}
-        />
-      </mesh>
+        {/* Filled disc */}
+        <mesh ref={discRef} position={[0, 0, 0.02]} {...pointerHandlers}>
+          <circleGeometry args={[0.39, 40]} />
+          <meshStandardMaterial
+            color="#1e3a10"
+            emissive="#FFD700"
+            emissiveIntensity={0.4}
+            side={THREE.DoubleSide}
+            transparent
+            opacity={0.9}
+          />
+        </mesh>
+      </Billboard>
 
       {/* Html labels — only when camera is on the right side and no panel open */}
       {!hideLabel && (
@@ -1511,7 +1518,10 @@ function SukkahInfoButton({ onClick, isSelected, hideLabel }) {
             </div>
           </Html>
           <Html position={[0, -0.65, 0.04]} center distanceFactor={14}>
-            <div style={{ textAlign: "center", pointerEvents: "none", lineHeight: 1.3 }}>
+            <div
+              onClick={onClick}
+              style={{ textAlign: "center", lineHeight: 1.3, cursor: "pointer", padding: "4px 6px" }}
+            >
               <div style={{ color: "white", fontSize: "10px", fontWeight: "bold", textShadow: "0 1px 5px rgba(0,0,0,1)", whiteSpace: "nowrap" }}>
                 הסוכה
               </div>
@@ -1523,13 +1533,8 @@ function SukkahInfoButton({ onClick, isSelected, hideLabel }) {
         </>
       )}
 
-      {/* Sphere hitbox — always present for clicking */}
-      <mesh
-        position={[0, -0.1, 0]}
-        onClick={(e) => { e.stopPropagation(); onClick(); }}
-        onPointerOver={(e) => { e.stopPropagation(); setHovered(true); document.body.style.cursor = "pointer"; }}
-        onPointerOut={(e) => { e.stopPropagation(); setHovered(false); document.body.style.cursor = "auto"; }}
-      >
+      {/* Sphere hitbox */}
+      <mesh position={[0, -0.1, 0]} {...pointerHandlers}>
         <sphereGeometry args={[0.55, 8, 8]} />
         <meshBasicMaterial transparent opacity={0} />
       </mesh>
@@ -2263,6 +2268,7 @@ export default function SukkahScenePage() {
             />
           </Suspense>
         </Canvas>
+
       </div>
 
       <div className="instructions">
@@ -2270,7 +2276,6 @@ export default function SukkahScenePage() {
           ✦ Click the <strong>6 glowing diamonds</strong> for each direction's
           kavana &nbsp;·&nbsp; 🌿 Click the{" "}
           <strong>Chassid's Daled Minim</strong> to explore each species
-          &nbsp;·&nbsp; ✨ Orbit left for the <strong>7 Ushpizin</strong> · Orbit right for the <strong>Sukkah</strong>
         </p>
       </div>
 
