@@ -2484,7 +2484,7 @@ function StarTorahPanel({ idea, onClose }) {
             className="info-card-content"
             style={{ fontSize: "0.85rem", opacity: 0.7 }}
           >
-            ✡ Click any star in the sky for another Torah idea
+            Click any star in the sky for another Torah idea
           </div>
         </div>
       </div>
