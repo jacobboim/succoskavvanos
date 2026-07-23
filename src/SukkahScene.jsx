@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import * as THREE from "three";
 import "./InfoPanel.css";
 import "./DaledMinum3D.css";
+import torahIdeas from "./data/succkostorahs.json";
 
 // ─── ALL CONTENT DATA ─────────────────────────────────────────────────────────
 
@@ -675,9 +676,9 @@ function DirectionMarker({
         new THREE.Vector3(
           hovered || isSelected ? 1.3 : 1,
           hovered || isSelected ? 1.3 : 1,
-          hovered || isSelected ? 1.3 : 1
+          hovered || isSelected ? 1.3 : 1,
         ),
-        0.1
+        0.1,
       );
     }
   });
@@ -774,7 +775,7 @@ function EnergyBeam({ from, to, color, visible }) {
 function WoodWall({ position, rotation = [0, 0, 0], width, height }) {
   const woodTones = useMemo(
     () => ["#8E6239", "#7C532E", "#9A6F46", "#6E4724", "#855B34", "#744E29"],
-    []
+    [],
   );
 
   const plankW = 0.55;
@@ -1273,7 +1274,13 @@ function SukkahShell() {
     </group>
   );
 }
-function UshpizinMedallion({ ushpiz, position, onClick, isSelected, hideLabels }) {
+function UshpizinMedallion({
+  ushpiz,
+  position,
+  onClick,
+  isSelected,
+  hideLabels,
+}) {
   const [hovered, setHovered] = useState(false);
   const discRef = useRef();
 
@@ -1285,9 +1292,20 @@ function UshpizinMedallion({ ushpiz, position, onClick, isSelected, hideLabels }
   });
 
   const pointerHandlers = {
-    onClick:      (e) => { e.stopPropagation(); onClick(); },
-    onPointerOver:(e) => { e.stopPropagation(); setHovered(true);  document.body.style.cursor = "pointer"; },
-    onPointerOut: (e) => { e.stopPropagation(); setHovered(false); document.body.style.cursor = "auto"; },
+    onClick: (e) => {
+      e.stopPropagation();
+      onClick();
+    },
+    onPointerOver: (e) => {
+      e.stopPropagation();
+      setHovered(true);
+      document.body.style.cursor = "pointer";
+    },
+    onPointerOut: (e) => {
+      e.stopPropagation();
+      setHovered(false);
+      document.body.style.cursor = "auto";
+    },
   };
 
   return (
@@ -1331,7 +1349,9 @@ function UshpizinMedallion({ ushpiz, position, onClick, isSelected, hideLabels }
         <>
           {/* Icon in center */}
           <Html position={[0, 0.06, 0.04]} center distanceFactor={14}>
-            <div style={{ fontSize: "22px", pointerEvents: "none", lineHeight: 1 }}>
+            <div
+              style={{ fontSize: "22px", pointerEvents: "none", lineHeight: 1 }}
+            >
               {ushpiz.icon}
             </div>
           </Html>
@@ -1475,9 +1495,20 @@ function SukkahInfoButton({ onClick, isSelected, hideLabel }) {
   });
 
   const pointerHandlers = {
-    onClick:       (e) => { e.stopPropagation(); onClick(); },
-    onPointerOver: (e) => { e.stopPropagation(); setHovered(true);  document.body.style.cursor = "pointer"; },
-    onPointerOut:  (e) => { e.stopPropagation(); setHovered(false); document.body.style.cursor = "auto"; },
+    onClick: (e) => {
+      e.stopPropagation();
+      onClick();
+    },
+    onPointerOver: (e) => {
+      e.stopPropagation();
+      setHovered(true);
+      document.body.style.cursor = "pointer";
+    },
+    onPointerOut: (e) => {
+      e.stopPropagation();
+      setHovered(false);
+      document.body.style.cursor = "auto";
+    },
   };
 
   return (
@@ -1515,19 +1546,40 @@ function SukkahInfoButton({ onClick, isSelected, hideLabel }) {
       {!hideLabel && (
         <>
           <Html position={[0, 0.06, 0.04]} center distanceFactor={14}>
-            <div style={{ fontSize: "20px", pointerEvents: "none", lineHeight: 1 }}>
+            <div
+              style={{ fontSize: "20px", pointerEvents: "none", lineHeight: 1 }}
+            >
               🏕️
             </div>
           </Html>
           <Html position={[0, -0.65, 0.04]} center distanceFactor={14}>
             <div
               onClick={onClick}
-              style={{ textAlign: "center", lineHeight: 1.3, cursor: "pointer", padding: "4px 6px" }}
+              style={{
+                textAlign: "center",
+                lineHeight: 1.3,
+                cursor: "pointer",
+                padding: "4px 6px",
+              }}
             >
-              <div style={{ color: "white", fontSize: "10px", fontWeight: "bold", textShadow: "0 1px 5px rgba(0,0,0,1)", whiteSpace: "nowrap" }}>
+              <div
+                style={{
+                  color: "white",
+                  fontSize: "10px",
+                  fontWeight: "bold",
+                  textShadow: "0 1px 5px rgba(0,0,0,1)",
+                  whiteSpace: "nowrap",
+                }}
+              >
                 הסוכה
               </div>
-              <div style={{ color: "#FFD700", fontSize: "9px", textShadow: "0 0 6px rgba(0,0,0,0.9)" }}>
+              <div
+                style={{
+                  color: "#FFD700",
+                  fontSize: "9px",
+                  textShadow: "0 0 6px rgba(0,0,0,0.9)",
+                }}
+              >
                 The Sukkah
               </div>
             </div>
@@ -1542,10 +1594,20 @@ function SukkahInfoButton({ onClick, isSelected, hideLabel }) {
       </mesh>
 
       {(hovered || isSelected) && (
-        <Sparkles count={12} scale={1.2} size={1.8} speed={0.5} color="#FFD700" />
+        <Sparkles
+          count={12}
+          scale={1.2}
+          size={1.8}
+          speed={0.5}
+          color="#FFD700"
+        />
       )}
 
-      <pointLight color="#FFD700" intensity={hovered || isSelected ? 0.6 : 0.2} distance={2.5} />
+      <pointLight
+        color="#FFD700"
+        intensity={hovered || isSelected ? 0.6 : 0.2}
+        distance={2.5}
+      />
     </group>
   );
 }
@@ -1651,6 +1713,124 @@ function Moon() {
   );
 }
 
+// ─── CLICKABLE STARS ──────────────────────────────────────────────────────────
+
+const CLICKABLE_STAR_POSITIONS = [
+  [-22, 28, -50],
+  [35, 32, -48],
+  [-40, 20, -35],
+  [18, 42, -55],
+  [-12, 35, -42],
+  [45, 18, -30],
+  [-30, 15, -52],
+  [8, 25, -35],
+  [-18, 45, -38],
+  [28, 22, -45],
+  [-8, 20, -38],
+  [22, 38, -52],
+];
+
+function ClickableStar3D({ position, onStarClick }) {
+  const meshRef = useRef();
+  const haloRef = useRef();
+  const [hovered, setHovered] = useState(false);
+
+  const pointerHandlers = {
+    onClick: (e) => {
+      e.stopPropagation();
+      onStarClick();
+    },
+    onPointerOver: (e) => {
+      e.stopPropagation();
+      setHovered(true);
+      document.body.style.cursor = "pointer";
+    },
+    onPointerOut: (e) => {
+      e.stopPropagation();
+      setHovered(false);
+      document.body.style.cursor = "auto";
+    },
+  };
+
+  useFrame(({ clock }) => {
+    const t = clock.elapsedTime * 2.2 + position[0] * 0.5;
+    if (meshRef.current) {
+      meshRef.current.material.emissiveIntensity = hovered
+        ? 1.4
+        : 0.4 + Math.sin(t) * 0.25;
+    }
+    if (haloRef.current) {
+      haloRef.current.material.opacity = hovered
+        ? 0.25
+        : 0.06 + Math.sin(t * 0.7) * 0.04;
+    }
+  });
+
+  return (
+    <group position={position}>
+      {/* Large invisible hitbox — much easier to click than the tiny dot */}
+      <mesh {...pointerHandlers}>
+        <sphereGeometry args={[2.5, 6, 6]} />
+        <meshBasicMaterial transparent opacity={0} depthWrite={false} />
+      </mesh>
+
+      {/* Visible star body */}
+      <mesh ref={meshRef} {...pointerHandlers}>
+        <sphereGeometry args={[0.38, 10, 10]} />
+        <meshStandardMaterial
+          color="#FFFDE7"
+          emissive="#FFD700"
+          emissiveIntensity={0.5}
+          transparent
+          opacity={0.95}
+        />
+      </mesh>
+
+      {/* Glow halo */}
+      <mesh ref={haloRef}>
+        <sphereGeometry args={[0.65, 10, 10]} />
+        <meshBasicMaterial
+          color="#FFE082"
+          transparent
+          opacity={0.08}
+          side={THREE.BackSide}
+          depthWrite={false}
+        />
+      </mesh>
+
+      {hovered && (
+        <Html distanceFactor={40} position={[0, 1.6, 0]}>
+          <div
+            style={{
+              background: "rgba(0,0,0,0.88)",
+              color: "#FFD700",
+              padding: "6px 14px",
+              borderRadius: "8px",
+              fontSize: "13px",
+              fontWeight: "bold",
+              whiteSpace: "nowrap",
+              pointerEvents: "none",
+              border: "1px solid rgba(255,215,0,0.4)",
+              letterSpacing: "0.5px",
+            }}
+          >
+            ✡ Click for a Torah idea
+          </div>
+        </Html>
+      )}
+      {hovered && (
+        <Sparkles
+          count={8}
+          scale={1.4}
+          size={1.5}
+          speed={0.6}
+          color="#FFD700"
+        />
+      )}
+    </group>
+  );
+}
+
 // Tracks camera position and fires callbacks only when values change.
 function CameraTracker({ onOutsideChange, onLeftChange, onRightChange }) {
   const prevOutside = useRef(false);
@@ -1663,9 +1843,18 @@ function CameraTracker({ onOutsideChange, onLeftChange, onRightChange }) {
       camera.position.z < -5.2;
     const onLeft = camera.position.x < -4;
     const onRight = camera.position.x > 4;
-    if (outside !== prevOutside.current) { prevOutside.current = outside; onOutsideChange(outside); }
-    if (onLeft !== prevLeft.current)     { prevLeft.current = onLeft;     onLeftChange(onLeft); }
-    if (onRight !== prevRight.current)   { prevRight.current = onRight;   onRightChange(onRight); }
+    if (outside !== prevOutside.current) {
+      prevOutside.current = outside;
+      onOutsideChange(outside);
+    }
+    if (onLeft !== prevLeft.current) {
+      prevLeft.current = onLeft;
+      onLeftChange(onLeft);
+    }
+    if (onRight !== prevRight.current) {
+      prevRight.current = onRight;
+      onRightChange(onRight);
+    }
   });
   return null;
 }
@@ -1716,6 +1905,7 @@ function MainScene({
   onSpeciesClick,
   onUshpizinClick,
   onSukkahClick,
+  onStarClick,
   selectedDirection,
   selectedUshpiz,
   selectedSukkah,
@@ -1730,6 +1920,14 @@ function MainScene({
   // Only show sukkah button Html when camera is on the right side AND no panel open
   const hideSukkahLabel = !cameraOnRight || hideLabels;
   const isMobile = useMemo(() => window.innerWidth < 768, []);
+  const controlsRef = useRef();
+
+  // Enable zoom-toward-cursor once controls mount
+  React.useEffect(() => {
+    if (controlsRef.current) {
+      controlsRef.current.zoomToCursor = true;
+    }
+  }, []);
 
   return (
     <>
@@ -1744,10 +1942,11 @@ function MainScene({
         fov={isMobile ? 70 : 62}
       />
       <OrbitControls
+        ref={controlsRef}
         enableDamping
         dampingFactor={0.05}
-        minDistance={5}
-        maxDistance={isMobile ? 30 : 20}
+        minDistance={4}
+        maxDistance={65}
         maxPolarAngle={Math.PI * 0.84}
         target={[0, 0.5, 0]}
         enablePan={false}
@@ -1853,6 +2052,11 @@ function MainScene({
         speed={0.12}
         color="#FFD700"
       />
+
+      {/* Clickable Torah stars in the sky */}
+      {CLICKABLE_STAR_POSITIONS.map((pos, i) => (
+        <ClickableStar3D key={i} position={pos} onStarClick={onStarClick} />
+      ))}
     </>
   );
 }
@@ -2193,7 +2397,10 @@ function SukkahPanel({ onClose }) {
         <div className="panel-direction-icon">{data.icon}</div>
         <h2 className="panel-title">{data.title}</h2>
         <p className="panel-subtitle">{data.hebrew}</p>
-        <p className="panel-subtitle" style={{ marginTop: "4px", fontSize: "0.95rem" }}>
+        <p
+          className="panel-subtitle"
+          style={{ marginTop: "4px", fontSize: "0.95rem" }}
+        >
           {data.subtitle}
         </p>
       </div>
@@ -2212,6 +2419,56 @@ function SukkahPanel({ onClose }) {
   );
 }
 
+function StarTorahPanel({ idea, onClose }) {
+  if (!idea) return null;
+  return (
+    <>
+      <button className="panel-close-btn" onClick={onClose}>
+        ✕
+      </button>
+      <div className="panel-header-content">
+        <div
+          className="panel-direction-icon"
+          style={{
+            fontSize: "2.2rem",
+            background: "linear-gradient(135deg, #B8860B, #FFD700)",
+          }}
+        >
+          {idea.emoji}
+        </div>
+        <h2 className="panel-title">{idea.title}</h2>
+        <p className="panel-subtitle">{idea.topic}</p>
+      </div>
+      <div className="panel-body">
+        <div className="info-card mystical">
+          <div className="info-card-title">Torah Insight</div>
+          <div
+            className="info-card-content"
+            style={{ fontSize: "1.02rem", lineHeight: 1.75 }}
+          >
+            {idea.idea}
+          </div>
+        </div>
+        <div className="info-card">
+          <div className="info-card-title">Source</div>
+          <div className="info-card-content">{idea.source}</div>
+        </div>
+        <div
+          className="info-card highlight"
+          style={{ textAlign: "center", padding: "14px" }}
+        >
+          <div
+            className="info-card-content"
+            style={{ fontSize: "0.85rem", opacity: 0.7 }}
+          >
+            ✡ Click any star in the sky for another Torah idea
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
 // ─── PAGE COMPONENT ───────────────────────────────────────────────────────────
 
 export default function SukkahScenePage() {
@@ -2219,16 +2476,31 @@ export default function SukkahScenePage() {
   const [selectedSpecies, setSelectedSpecies] = useState(null);
   const [selectedUshpiz, setSelectedUshpiz] = useState(null);
   const [selectedSukkah, setSelectedSukkah] = useState(false);
+  const [selectedStarIdea, setSelectedStarIdea] = useState(null);
 
-  const anyOpen = selectedDirection || selectedSpecies || selectedUshpiz || selectedSukkah;
+  const anyOpen =
+    selectedDirection ||
+    selectedSpecies ||
+    selectedUshpiz ||
+    selectedSukkah ||
+    selectedStarIdea;
 
   const closeAll = () => {
     setSelectedDirection(null);
     setSelectedSpecies(null);
     setSelectedUshpiz(null);
     setSelectedSukkah(false);
+    setSelectedStarIdea(null);
   };
 
+  const handleStarClick = () => {
+    const idea = torahIdeas[Math.floor(Math.random() * torahIdeas.length)];
+    setSelectedStarIdea(idea);
+    setSelectedDirection(null);
+    setSelectedSpecies(null);
+    setSelectedUshpiz(null);
+    setSelectedSukkah(false);
+  };
 
   const dirData = selectedDirection ? DIRECTIONS_INFO[selectedDirection] : null;
   const specData = selectedSpecies ? SPECIES_INFO[selectedSpecies] : null;
@@ -2271,6 +2543,7 @@ export default function SukkahScenePage() {
               onSpeciesClick={setSelectedSpecies}
               onUshpizinClick={setSelectedUshpiz}
               onSukkahClick={() => setSelectedSukkah((v) => !v)}
+              onStarClick={handleStarClick}
               selectedDirection={selectedDirection}
               selectedUshpiz={selectedUshpiz}
               selectedSukkah={selectedSukkah}
@@ -2278,16 +2551,15 @@ export default function SukkahScenePage() {
             />
           </Suspense>
         </Canvas>
-
       </div>
 
-      <div className="instructions">
+      {/* <div className="instructions">
         <p>
           ✦ Click the <strong>6 glowing diamonds</strong> for each direction's
           kavana &nbsp;·&nbsp; 🌿 Click the{" "}
           <strong>Chassid's Daled Minim</strong> to explore each species
         </p>
-      </div>
+      </div> */}
 
       {/* Global close button — lives outside all panels so backdrop-filter
           on the panel can't break position:fixed */}
@@ -2312,8 +2584,14 @@ export default function SukkahScenePage() {
             zIndex: 2010,
             transition: "background 0.2s, transform 0.2s",
           }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.25)"; e.currentTarget.style.transform = "rotate(90deg)"; }}
-          onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.12)"; e.currentTarget.style.transform = "rotate(0deg)"; }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "rgba(255,255,255,0.25)";
+            e.currentTarget.style.transform = "rotate(90deg)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "rgba(255,255,255,0.12)";
+            e.currentTarget.style.transform = "rotate(0deg)";
+          }}
         >
           ✕
         </button>
@@ -2390,6 +2668,23 @@ export default function SukkahScenePage() {
           <UshpizinPanel
             data={ushpizData}
             onClose={() => setSelectedUshpiz(null)}
+          />
+        )}
+      </div>
+
+      {/* Star Torah idea panel */}
+      <div
+        className={`info-slide-panel ${selectedStarIdea ? "open" : ""}`}
+        style={{
+          "--panel-color": "#FFD700",
+          "--panel-color-dark": "#B8860B",
+          "--panel-color-glow": "#FFD70080",
+        }}
+      >
+        {selectedStarIdea && (
+          <StarTorahPanel
+            idea={selectedStarIdea}
+            onClose={() => setSelectedStarIdea(null)}
           />
         )}
       </div>
